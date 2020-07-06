@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-28T06:36:01.301Z</updated>
+  <updated>2020-07-06T01:47:18.939Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微分方程模型-火箭发射模型</title>
+    <link href="http://yoursite.com/wiki/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B-%E7%81%AB%E7%AE%AD%E5%8F%91%E5%B0%84%E6%A8%A1%E5%9E%8B/"/>
+    <id>http://yoursite.com/wiki/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B-%E7%81%AB%E7%AE%AD%E5%8F%91%E5%B0%84%E6%A8%A1%E5%9E%8B/</id>
+    <published>2020-07-06T01:17:10.000Z</published>
+    <updated>2020-07-06T01:47:18.939Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="微分方程模型-火箭发射模型"><a href="#微分方程模型-火箭发射模型" class="headerlink" title="微分方程模型-火箭发射模型"></a>微分方程模型-火箭发射模型</h1><p>火箭发射问题是微分方程模型中的第一个模型，主要关注以下几个问题：火箭进入轨道需要达到的最小末速度，火箭推力和末速度的数学推导，一级火箭模型，多级火箭模型。<br><a id="more"></a></p><h2 id="发射最低末速度"><a href="#发射最低末速度" class="headerlink" title="发射最低末速度"></a>发射最低末速度</h2><h2 id="火箭推进力及末速度模型"><a href="#火箭推进力及末速度模型" class="headerlink" title="火箭推进力及末速度模型"></a>火箭推进力及末速度模型</h2><h2 id="理想火箭模型"><a href="#理想火箭模型" class="headerlink" title="理想火箭模型"></a>理想火箭模型</h2><h2 id="多级火箭模型"><a href="#多级火箭模型" class="headerlink" title="多级火箭模型"></a>多级火箭模型</h2><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote><p>数学建模算法与应用（第2版），司守奎，孙兆亮：第6章 微分方程建模，6.1 发射卫星为什么用三级火箭</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;微分方程模型-火箭发射模型&quot;&gt;&lt;a href=&quot;#微分方程模型-火箭发射模型&quot; class=&quot;headerlink&quot; title=&quot;微分方程模型-火箭发射模型&quot;&gt;&lt;/a&gt;微分方程模型-火箭发射模型&lt;/h1&gt;&lt;p&gt;火箭发射问题是微分方程模型中的第一个模型，主要关注以下几个问题：火箭进入轨道需要达到的最小末速度，火箭推力和末速度的数学推导，一级火箭模型，多级火箭模型。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="数学建模" scheme="http://yoursite.com/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>第一部分 从伊甸园到卡哈马卡</title>
