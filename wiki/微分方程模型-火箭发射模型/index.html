@@ -17,7 +17,7 @@
 <meta property="og:description" content="火箭发射问题是微分方程模型中的第一个模型，主要关注以下几个问题：火箭进入轨道需要达到的最小末速度，火箭推力和末速度的数学推导，一级火箭模型，多级火箭模型。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-06T01:17:10.000Z">
-<meta property="article:modified_time" content="2020-07-06T02:22:54.021Z">
+<meta property="article:modified_time" content="2020-07-06T02:44:55.660Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
     
@@ -339,7 +339,7 @@
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">Catalogue</strong>
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#发射最低末速度"><span class="toc-number">1.</span> <span class="toc-text">发射最低末速度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#火箭推进力及末速度模型"><span class="toc-number">2.</span> <span class="toc-text">火箭推进力及末速度模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#理想火箭模型"><span class="toc-number">3.</span> <span class="toc-text">理想火箭模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多级火箭模型"><span class="toc-number">4.</span> <span class="toc-text">多级火箭模型</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#发射最低末速度"><span class="toc-number">1.</span> <span class="toc-text">发射最低末速度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#火箭推进力及末速度模型"><span class="toc-number">2.</span> <span class="toc-text">火箭推进力及末速度模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#模型假设"><span class="toc-number">2.1.</span> <span class="toc-text">模型假设</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#建模分析"><span class="toc-number">2.2.</span> <span class="toc-text">建模分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#理想火箭模型"><span class="toc-number">3.</span> <span class="toc-text">理想火箭模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多级火箭模型"><span class="toc-number">4.</span> <span class="toc-text">多级火箭模型</span></a></li></ol>
                 </div>
             
         
@@ -347,8 +347,13 @@
             <p>火箭发射问题是微分方程模型中的第一个模型，主要关注以下几个问题：火箭进入轨道需要达到的最小末速度，火箭推力和末速度的数学推导，一级火箭模型，多级火箭模型。<br><a id="more"></a></p>
 <h2 id="发射最低末速度"><a href="#发射最低末速度" class="headerlink" title="发射最低末速度"></a>发射最低末速度</h2><p>根据牛顿第二定律：</p>
 <script type="math/tex; mode=display">F = G\frac{Mm}{r^2}</script><p>地球表面有：$mg = F = G\frac{Mm}{R^2}$, 轨道上有：$G\frac{Mm}{R^2} = m\frac{v^2}{r}$<br>联立得：</p>
-<script type="math/tex; mode=display">v = \sqrt{\frac{gR^2}{r}}</script><p>代入实际数据：$R=6400km, r-R=600km, g\approx9.81m\div s^2$，得：</p>
-<script type="math/tex; mode=display">v \approx 7.6km\div s</script><h2 id="火箭推进力及末速度模型"><a href="#火箭推进力及末速度模型" class="headerlink" title="火箭推进力及末速度模型"></a>火箭推进力及末速度模型</h2><h2 id="理想火箭模型"><a href="#理想火箭模型" class="headerlink" title="理想火箭模型"></a>理想火箭模型</h2><h2 id="多级火箭模型"><a href="#多级火箭模型" class="headerlink" title="多级火箭模型"></a>多级火箭模型</h2><blockquote>
+<script type="math/tex; mode=display">v = \sqrt{\frac{gR^2}{r}}</script><p>代入实际数据：$R=6400km, r-R=600km, g\approx9.81m/s^2$，得：</p>
+<script type="math/tex; mode=display">v \approx 7.6km/s</script><h2 id="火箭推进力及末速度模型"><a href="#火箭推进力及末速度模型" class="headerlink" title="火箭推进力及末速度模型"></a>火箭推进力及末速度模型</h2><h3 id="模型假设"><a href="#模型假设" class="headerlink" title="模型假设"></a>模型假设</h3><ol>
+<li>火箭做直线运动，重力和空气阻力忽略不计</li>
+<li>在$t$时刻火箭质量为$m(t)$，速度为$v(t)$，均为$t$的连续可微函数</li>
+<li>火箭喷发气体相对火箭速度为常数$u$<h3 id="建模分析"><a href="#建模分析" class="headerlink" title="建模分析"></a>建模分析</h3>由泰勒展开：<script type="math/tex; mode=display">m(t+\Delta)-m(t)=\frac{dm}{dt}\Delta t+\omicron(\Delta t)</script>由动量定理：<script type="math/tex; mode=display">m(t)v(t) = m(t+\Delta t)v(t+\Delta t) - [m(t+\Delta t)-m(t)][v(t)-u]</script><script type="math/tex; mode=display">\Rightarrow \frac{m(t+\Delta t)v(t+\Delta t)-m(t)v(t)}{\Delta t}=\frac{dm}{dt}[v(t)-u]</script><script type="math/tex; mode=display">\Rightarrow \frac{d(mv)}{dt} = \frac{dm}{dt}v(t)-u\frac{dm}{dt}</script><script type="math/tex; mode=display">\Rightarrow F = m\frac{dv}{dt} = -u\frac{dm}{dt}</script><script type="math/tex; mode=display">\Rightarrow \int_{v_0}^{v(t)} , {\rm d}v = \int_{m_0}^{m(t)} -\frac{u}{m}, {\rm d}m</script><script type="math/tex; mode=display">\Rightarrow v(t) = v_0+u\ln \frac{m_0}{m(t)}</script>要提高火箭末速度，在初速度$v_0$和火箭初质量$m_0$给定时，只能增大喷发气体速度$u$或减小末质量$m(t)$<h2 id="理想火箭模型"><a href="#理想火箭模型" class="headerlink" title="理想火箭模型"></a>理想火箭模型</h2></li>
+</ol>
+<h2 id="多级火箭模型"><a href="#多级火箭模型" class="headerlink" title="多级火箭模型"></a>多级火箭模型</h2><blockquote>
 <p>数学建模算法与应用（第2版），司守奎，孙兆亮：第6章 微分方程建模，6.1 发射卫星为什么用三级火箭</p>
 </blockquote>
 
