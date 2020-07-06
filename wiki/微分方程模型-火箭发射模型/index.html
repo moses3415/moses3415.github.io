@@ -16,10 +16,12 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="火箭发射问题是微分方程模型中的第一个模型，主要关注以下几个问题：火箭进入轨道需要达到的最小末速度，火箭推力和末速度的数学推导，一级火箭模型，多级火箭模型。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/wiki/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B-%E7%81%AB%E7%AE%AD%E5%8F%91%E5%B0%84%E6%A8%A1%E5%9E%8B/pic1.fig">
 <meta property="article:published_time" content="2020-07-06T01:17:10.000Z">
-<meta property="article:modified_time" content="2020-07-06T02:44:55.660Z">
+<meta property="article:modified_time" content="2020-07-06T08:17:51.601Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/wiki/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B-%E7%81%AB%E7%AE%AD%E5%8F%91%E5%B0%84%E6%A8%A1%E5%9E%8B/pic1.fig">
     
 
     
@@ -339,7 +341,7 @@
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">Catalogue</strong>
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#发射最低末速度"><span class="toc-number">1.</span> <span class="toc-text">发射最低末速度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#火箭推进力及末速度模型"><span class="toc-number">2.</span> <span class="toc-text">火箭推进力及末速度模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#模型假设"><span class="toc-number">2.1.</span> <span class="toc-text">模型假设</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#建模分析"><span class="toc-number">2.2.</span> <span class="toc-text">建模分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#理想火箭模型"><span class="toc-number">3.</span> <span class="toc-text">理想火箭模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多级火箭模型"><span class="toc-number">4.</span> <span class="toc-text">多级火箭模型</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#发射最低末速度"><span class="toc-number">1.</span> <span class="toc-text">发射最低末速度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#火箭推进力及末速度模型"><span class="toc-number">2.</span> <span class="toc-text">火箭推进力及末速度模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#模型假设"><span class="toc-number">2.1.</span> <span class="toc-text">模型假设</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#建模分析"><span class="toc-number">2.2.</span> <span class="toc-text">建模分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一级火箭模型"><span class="toc-number">3.</span> <span class="toc-text">一级火箭模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#模型假设-1"><span class="toc-number">3.1.</span> <span class="toc-text">模型假设</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#建模分析-1"><span class="toc-number">3.2.</span> <span class="toc-text">建模分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#理想火箭模型"><span class="toc-number">4.</span> <span class="toc-text">理想火箭模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#模型假设-2"><span class="toc-number">4.1.</span> <span class="toc-text">模型假设</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#建模分析-2"><span class="toc-number">4.2.</span> <span class="toc-text">建模分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多级火箭模型"><span class="toc-number">5.</span> <span class="toc-text">多级火箭模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#模型假设-3"><span class="toc-number">5.1.</span> <span class="toc-text">模型假设</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#建模分析-3"><span class="toc-number">5.2.</span> <span class="toc-text">建模分析</span></a></li></ol></li></ol>
                 </div>
             
         
@@ -351,10 +353,40 @@
 <script type="math/tex; mode=display">v \approx 7.6km/s</script><h2 id="火箭推进力及末速度模型"><a href="#火箭推进力及末速度模型" class="headerlink" title="火箭推进力及末速度模型"></a>火箭推进力及末速度模型</h2><h3 id="模型假设"><a href="#模型假设" class="headerlink" title="模型假设"></a>模型假设</h3><ol>
 <li>火箭做直线运动，重力和空气阻力忽略不计</li>
 <li>在$t$时刻火箭质量为$m(t)$，速度为$v(t)$，均为$t$的连续可微函数</li>
-<li>火箭喷发气体相对火箭速度为常数$u$<h3 id="建模分析"><a href="#建模分析" class="headerlink" title="建模分析"></a>建模分析</h3>由泰勒展开：<script type="math/tex; mode=display">m(t+\Delta)-m(t)=\frac{dm}{dt}\Delta t+\omicron(\Delta t)</script>由动量定理：<script type="math/tex; mode=display">m(t)v(t) = m(t+\Delta t)v(t+\Delta t) - [m(t+\Delta t)-m(t)][v(t)-u]</script><script type="math/tex; mode=display">\Rightarrow \frac{m(t+\Delta t)v(t+\Delta t)-m(t)v(t)}{\Delta t}=\frac{dm}{dt}[v(t)-u]</script><script type="math/tex; mode=display">\Rightarrow \frac{d(mv)}{dt} = \frac{dm}{dt}v(t)-u\frac{dm}{dt}</script><script type="math/tex; mode=display">\Rightarrow F = m\frac{dv}{dt} = -u\frac{dm}{dt}</script><script type="math/tex; mode=display">\Rightarrow \int_{v_0}^{v(t)} , {\rm d}v = \int_{m_0}^{m(t)} -\frac{u}{m}, {\rm d}m</script><script type="math/tex; mode=display">\Rightarrow v(t) = v_0+u\ln \frac{m_0}{m(t)}</script>要提高火箭末速度，在初速度$v_0$和火箭初质量$m_0$给定时，只能增大喷发气体速度$u$或减小末质量$m(t)$<h2 id="理想火箭模型"><a href="#理想火箭模型" class="headerlink" title="理想火箭模型"></a>理想火箭模型</h2></li>
+<li>火箭喷发气体相对火箭速度为常数$u$<h3 id="建模分析"><a href="#建模分析" class="headerlink" title="建模分析"></a>建模分析</h3>由泰勒展开：<script type="math/tex; mode=display">m(t+\Delta t)-m(t)=\frac{dm}{dt}\Delta t+\omicron(\Delta t)</script>由动量定理：<script type="math/tex; mode=display">m(t)v(t) = m(t+\Delta t)v(t+\Delta t) - [m(t+\Delta t)-m(t)][v(t)-u]</script><script type="math/tex; mode=display">\Rightarrow \frac{m(t+\Delta t)v(t+\Delta t)-m(t)v(t)}{\Delta t}=\frac{dm}{dt}[v(t)-u]</script><script type="math/tex; mode=display">\Rightarrow \frac{d(mv)}{dt} = \frac{dm}{dt}v(t)-u\frac{dm}{dt}</script><script type="math/tex; mode=display">\Rightarrow F = m\frac{dv}{dt} = -u\frac{dm}{dt}</script><script type="math/tex; mode=display">\Rightarrow \int_{v_0}^{v(t)}{\rm d}v = \int_{m_0}^{m(t)} -\frac{u}{m}{\rm d}m</script><script type="math/tex; mode=display">\Rightarrow v(t) = v_0+u\ln \frac{m_0}{m(t)}</script>要提高火箭末速度，在初速度$v_0$和火箭初质量$m_0$给定时，只能增大喷发气体速度$u$或减小末质量$m(t)$</li>
 </ol>
-<h2 id="多级火箭模型"><a href="#多级火箭模型" class="headerlink" title="多级火箭模型"></a>多级火箭模型</h2><blockquote>
-<p>数学建模算法与应用（第2版），司守奎，孙兆亮：第6章 微分方程建模，6.1 发射卫星为什么用三级火箭</p>
+<h2 id="一级火箭模型"><a href="#一级火箭模型" class="headerlink" title="一级火箭模型"></a>一级火箭模型</h2><h3 id="模型假设-1"><a href="#模型假设-1" class="headerlink" title="模型假设"></a>模型假设</h3><p>首先对一些变量常量做出定义：火箭初质量$m_0$，火箭有效负载$m_p$，火箭燃料质量$m_F$，火箭结构质量$m_s$</p>
+<p>容易得到关系式：$m_0=m_p+m_F+m_s$<br>技术条件限制:$u=3km/s$及</p>
+<script type="math/tex; mode=display">\frac{m_s}{m_F+m_s} \geqslant \frac{1}{9}</script><p>发射时初速度忽略不计，即$v_0=0$</p>
+<h3 id="建模分析-1"><a href="#建模分析-1" class="headerlink" title="建模分析"></a>建模分析</h3><p>根据上述讨论可得末速度：</p>
+<script type="math/tex; mode=display">v = u\ln\frac{m_0}{m_p+m_s}</script><p>令$m_s=\lambda(m_F+m_s)=\lambda(m_0-m_p)$，$\frac{1}{9}\leqslant\lambda\leqslant1$，代入上式可得：</p>
+<script type="math/tex; mode=display">v = u\ln\frac{m_0}{\lambda m_0+(1-\lambda)m_p}</script><p>令$m_p=0$，得到火箭末速度上限：</p>
+<script type="math/tex; mode=display">v_{max} = u\ln\frac{1}{\lambda}</script><p>代入数据可得：</p>
+<script type="math/tex; mode=display">v_{max} \approx 6.6km/s < 7.6km/s</script><p>无法达到最低末速度</p>
+<h2 id="理想火箭模型"><a href="#理想火箭模型" class="headerlink" title="理想火箭模型"></a>理想火箭模型</h2><h3 id="模型假设-2"><a href="#模型假设-2" class="headerlink" title="模型假设"></a>模型假设</h3><p>随着燃料燃烧，即$m_F$不断减少，$m_s$也随之被丢弃减少</p>
+<p>假设质量减少的比例分别为$1-\alpha$和$\alpha$</p>
+<p>考虑到空气阻力和重力等因素，发射最低末速度可以定为$10.5km/s$</p>
+<h3 id="建模分析-2"><a href="#建模分析-2" class="headerlink" title="建模分析"></a>建模分析</h3><p>类似上文推导：</p>
+<script type="math/tex; mode=display">m(t)v(t) = m(t+\Delta t)v(t+\Delta t) - (1-\alpha)[m(t+\Delta t)-m(t)][v(t)-u]-\alpha[m(t+\Delta t)-m(t)]v(t)</script><script type="math/tex; mode=display">\Rightarrow v = v_0+(1-\alpha)u\ln\frac{m_0}{m(t)}</script><p>卫星脱离火箭时：</p>
+<script type="math/tex; mode=display">v_{max}=(1-\alpha)u\ln\frac{m_0}{m_p}</script><p>代入数据$v_{max}=10.5km/s$，$\alpha=0.1$，$u=3km/s$，可得：</p>
+<script type="math/tex; mode=display">\frac{m_0}{m_p}\approx48.9</script><h2 id="多级火箭模型"><a href="#多级火箭模型" class="headerlink" title="多级火箭模型"></a>多级火箭模型</h2><h3 id="模型假设-3"><a href="#模型假设-3" class="headerlink" title="模型假设"></a>模型假设</h3><ol>
+<li>第$i$级火箭结构质量$\lambda m_i$，燃料质量$(1-\lambda)m_i$</li>
+<li>$u$对于各级火箭都相同</li>
+<li>假设各个燃料级负载总质量与该燃料级脱离后质量之比为常数$k$（后面详述原因），即：<script type="math/tex; mode=display">k=\frac{m_1+m_2+\cdots+m_n+m_p}{m_2+m_3+\cdots+m_n+m_p}=\frac{m_2+m_3+\cdots+m_n+m_p}{m_3+m_4+\cdots+m_n+m_p}=\cdots</script><h3 id="建模分析-3"><a href="#建模分析-3" class="headerlink" title="建模分析"></a>建模分析</h3>对于二级火箭：<script type="math/tex; mode=display">v_1 = u\ln\frac{m_1+m_2+m_p}{\lambda m_1+m_2+m_p} = u\ln\frac{k}{\lambda (k-1)+1}</script><script type="math/tex; mode=display">v_2 = v_1 + u\ln\frac{m_2+m_p}{\lambda m_2+m_p} = 2u\ln\frac{k}{\lambda (k-1)+1}</script>取$u=3km/s$，$\lambda=0.1$，$v_2=10.5km/s$，代入得：<script type="math/tex; mode=display">k\approx 12.20</script><script type="math/tex; mode=display">\frac{m_0}{m_p}=k^2\approx 149</script></li>
+</ol>
+<p>对于假设3，需要分析何时$m_0/m_p$最小</p>
+<p>记</p>
+<script type="math/tex; mode=display">w_1 = m_0 = m_1 + m_2 +\cdots+ m_n + m_p</script><script type="math/tex; mode=display">w_2 = m_2 + m_3 +\cdots+ m_n + m_p</script><script type="math/tex; mode=display">\cdots</script><script type="math/tex; mode=display">w_{n+1} = m_p</script><script type="math/tex; mode=display">k_1 = \frac{w_1}{w_2}, \cdots, k_n = \frac{w_n}{w_{n+1}}</script><p>则</p>
+<script type="math/tex; mode=display">v_n = u\ln(\frac{w_1}{\lambda m_1+w_2}\cdots\frac{w_n}{\lambda m_n+w_{n+1}})</script><script type="math/tex; mode=display">\Rightarrow v_n = u\ln(\frac{k_1}{\lambda(k_1-1)+1} \cdots\frac{k_n}{\lambda(k_n-1)+1})</script><p>问题转化为：</p>
+<script type="math/tex; mode=display">\min \frac{m_0}{m_p} = k_1k_2 \cdots k_n</script><script type="math/tex; mode=display">\mathrm{ s.t. } \frac{k_1k_2\cdots k_n}{[\lambda(k_1-1)+1]\cdots[\lambda(k_n-1)+1]} = c</script><p>可以推出，当$k_1=k_2=\cdots=k_n$时，$m_0/m_p$最小，满足假设3</p>
+<p>对于三级火箭，类似的有：</p>
+<script type="math/tex; mode=display">v_3 = 3u\ln\frac{k}{\lambda (k-1)+1}</script><script type="math/tex; mode=display">k\approx 4.26</script><script type="math/tex; mode=display">\frac{m_0}{m_p}=k^3\approx 77</script><p>对于$n$级的火箭，有：</p>
+<script type="math/tex; mode=display">v_n = nu\ln\frac{k}{\lambda (k-1)+1}</script><p>通过MATLAB绘图如下：<br><img src="/wiki/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B-%E7%81%AB%E7%AE%AD%E5%8F%91%E5%B0%84%E6%A8%A1%E5%9E%8B/pic1.fig" alt="n从2到100的图像"></p>
+<p>当$n\to \infty$时，$v_n \to 50$</p>
+<p>结论：随着火箭燃料级数的增多，$m_0/m_p$减小，加速相同质量$(m_p)$的载荷所需的火箭质量减少，理论上级数越多越好，但由于受到技术水平的限制，四级及以上的火箭经济效益方面不合算，因此目前多采用三级火箭。</p>
+<blockquote>
+<p>参考：数学建模算法与应用（第2版），司守奎，孙兆亮：第6章 微分方程建模，6.1 发射卫星为什么用三级火箭</p>
+<p>附MATLAB代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">clc,clear</span><br><span class="line">n&#x3D;2;</span><br><span class="line">hold on</span><br><span class="line">while n&lt;100</span><br><span class="line">    k &#x3D; (0.9*exp(3.5&#x2F;n))&#x2F;(1-0.1*exp(3.5&#x2F;n));</span><br><span class="line">    y &#x3D; k^n;</span><br><span class="line">    plot(n,y,&#39;*k&#39;)</span><br><span class="line">    n&#x3D;n+1;</span><br><span class="line">end</span><br><span class="line">xlabel(&#39;n&#39;),ylabel(&#39;&#123;m_0&#125;&#x2F;&#123;m_p&#125;&#39;)</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 
             </div>
