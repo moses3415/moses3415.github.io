@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-07T01:29:20.890Z</updated>
+  <updated>2020-07-09T09:22:35.424Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数学建模讲座-概率统计方法应用</title>
+    <link href="http://yoursite.com/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%AE%B2%E5%BA%A7-%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E5%BA%94%E7%94%A8/"/>
+    <id>http://yoursite.com/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%AE%B2%E5%BA%A7-%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E5%BA%94%E7%94%A8/</id>
+    <published>2020-07-09T05:52:25.000Z</published>
+    <updated>2020-07-09T09:22:35.424Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>时间：2020.7.9 2:00-4:00 p.m</p><p>地点：线上（Zoom）</p><p>主讲人：罗珊，上海交通大学数学科学学院 副教授，sluomath@sjtu.edu.cn</p><p>内容：概率统计方法应用<br><a id="more"></a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;时间：2020.7.9 2:00-4:00 p.m&lt;/p&gt;
+&lt;p&gt;地点：线上（Zoom）&lt;/p&gt;
+&lt;p&gt;主讲人：罗珊，上海交通大学数学科学学院 副教授，sluomath@sjtu.edu.cn&lt;/p&gt;
+&lt;p&gt;内容：概率统计方法应用&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="数学建模" scheme="http://yoursite.com/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"/>
+    
+    
+      <category term="讲座" scheme="http://yoursite.com/tags/%E8%AE%B2%E5%BA%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数学建模讲座-运筹学：模型、理论、算法</title>
+    <link href="http://yoursite.com/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%AE%B2%E5%BA%A7-%E8%BF%90%E7%AD%B9%E5%AD%A6%EF%BC%9A%E6%A8%A1%E5%9E%8B%E3%80%81%E7%90%86%E8%AE%BA%E3%80%81%E7%AE%97%E6%B3%95/"/>
+    <id>http://yoursite.com/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%AE%B2%E5%BA%A7-%E8%BF%90%E7%AD%B9%E5%AD%A6%EF%BC%9A%E6%A8%A1%E5%9E%8B%E3%80%81%E7%90%86%E8%AE%BA%E3%80%81%E7%AE%97%E6%B3%95/</id>
+    <published>2020-07-09T05:52:25.000Z</published>
+    <updated>2020-07-09T09:22:32.347Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>时间：2020.7.8 9:15-11:00 a.m</p><p>地点：线上（知网在线教学）</p><p>主讲人：胡旭东，中国科学院数学与系统科学研究院研究员、中国运筹学会理事长</p><p>内容：运筹学——模型、理论、算法<br><a id="more"></a></p><h2 id="最速降线问题"><a href="#最速降线问题" class="headerlink" title="最速降线问题"></a>最速降线问题</h2><h3 id="问题物理描述"><a href="#问题物理描述" class="headerlink" title="问题物理描述"></a>问题物理描述</h3><p>设最速降线方程为 $y=y(x)$，曲线上一点 $M(x,y)$.</p><p>由能量守恒：</p><script type="math/tex; mode=display">mgy = \frac{1}{2}mv^2</script><script type="math/tex; mode=display">\Rightarrow v = \sqrt{2gy} \tag{1}</script><p>又 $\mathrm{d}s = \sqrt{1+y’^2(x)}\mathrm{d}x$</p><script type="math/tex; mode=display">\Rightarrow v = \frac{\mathrm{d}s}{\mathrm{d}t} = \frac{\sqrt{1+y'^2(x)}\mathrm{d}x}{\mathrm{d}t} \tag{2}</script><p>由 $(1)(2)$ 知，运动总时间</p><script type="math/tex; mode=display">T = \int_{x_1}^{x_2} \frac{\sqrt{1+y'^2}}{\sqrt{2gy}}\, {\rm d}x</script><p>于是问题化为：</p><script type="math/tex; mode=display">\min T = \int_{x_1}^{x_2} \frac{\sqrt{1+y'^2}}{\sqrt{2gy}}\, {\rm d}x</script><script type="math/tex; mode=display">\mathrm{ s.t. }\quad y(0)=0,\quad y(x_1)=y_1 \tag{3}</script><h3 id="问题求解"><a href="#问题求解" class="headerlink" title="问题求解"></a>问题求解</h3><h4 id="约翰·伯努利的方法——光学斯涅耳定律"><a href="#约翰·伯努利的方法——光学斯涅耳定律" class="headerlink" title="约翰·伯努利的方法——光学斯涅耳定律"></a>约翰·伯努利的方法——光学斯涅耳定律</h4><p>由费马原理：光传播的路径是光程取极值的路径，光的折射满足斯涅耳定律，即：</p><script type="math/tex; mode=display">\frac{\sin \theta_1}{\sin \theta_2}=\frac{n_2}{n_1}=\frac{v_1}{v_2}</script><p>其中 $\theta,n,v$ 分别是光线与法线夹角，折射率和光速.</p><p>类似的，最速降线应满足斯涅耳定律，即：$\sin \theta \propto v$</p><p>设 $\sin \theta = kv$，又$\sin \theta = \dfrac{\mathrm{d}x}{\mathrm{d}s}$，有：</p><script type="math/tex; mode=display">kv = \frac{\mathrm{d}x}{\mathrm{d}s} = \frac{1}{\sqrt{1+y'^2(x)}} \tag{4}</script><p>将 $(1)$ 代入 $(4)$ 得：</p><script type="math/tex; mode=display">k\sqrt{2gy} = \frac{1}{\sqrt{1+y'^2(x)}}</script><script type="math/tex; mode=display">\Rightarrow\begin{cases}    y(x)[1+y'^2(x)] = \dfrac{1}{2gk^2} =C \\    y(0) = 0\end{cases}\tag{5}</script><p>其中 $C$ 为常数.</p><p>求解该微分方程得：</p><script type="math/tex; mode=display">\begin{cases}    x = \dfrac{C}{2}(t-\sin t)\\\\    y = \dfrac{C}{2}(\cos t-1)\end{cases}</script><p>为摆线（ $r=\dfrac{1}{2}C$ ）</p><h4 id="变分法"><a href="#变分法" class="headerlink" title="变分法"></a>变分法</h4><h5 id="泛函"><a href="#泛函" class="headerlink" title="泛函"></a>泛函</h5><h5 id="变分"><a href="#变分" class="headerlink" title="变分"></a>变分</h5><h5 id="欧拉-拉格朗日方程"><a href="#欧拉-拉格朗日方程" class="headerlink" title="欧拉-拉格朗日方程"></a>欧拉-拉格朗日方程</h5><h5 id="求解"><a href="#求解" class="headerlink" title="求解"></a>求解</h5><h2 id="欧拉公式"><a href="#欧拉公式" class="headerlink" title="欧拉公式"></a>欧拉公式</h2><p>凸多边形满足 $F-E+V = 2$，其中 $F$：面数，$E$：棱数，$V$：点数.</p><p>$\mathrm{ e.g. }$ 足球表面有几个正五边形和正六边形？</p><p>解：</p><p>个数分别设为 $x$，$y$，则：</p><script type="math/tex; mode=display">\begin{cases}    F = x+y\\\\    E = \dfrac{5x+6y}{2}\\\\    V = \dfrac{5x+6y}{3}\end{cases}</script><p>由欧拉公式和几何关系：</p><script type="math/tex; mode=display">\begin{cases}    \dfrac{1}{6}x=2\\\\    y = \dfrac{5}{6}x\end{cases}</script><p>解得：$x=12$，$y=20$</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;时间：2020.7.8 9:15-11:00 a.m&lt;/p&gt;
+&lt;p&gt;地点：线上（知网在线教学）&lt;/p&gt;
+&lt;p&gt;主讲人：胡旭东，中国科学院数学与系统科学研究院研究员、中国运筹学会理事长&lt;/p&gt;
+&lt;p&gt;内容：运筹学——模型、理论、算法&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="数学建模" scheme="http://yoursite.com/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"/>
+    
+    
+      <category term="讲座" scheme="http://yoursite.com/tags/%E8%AE%B2%E5%BA%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>微分方程模型-人口模型</title>
