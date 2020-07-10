@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    
+    <title>数学建模-插值 | Hexo</title>
+    
+    
+        <meta name="keywords" content="数学建模-插值">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="插值是指在离散数据的基础上补插连续函数，使得这条连续曲线通过全部给定的离散数据点. 显然，插值的目标是构建通过已知点的插值函数，并不一定要求总体趋势上的一致性. 本文主要通过Matlab实现一维插值、二维插值，并介绍相关绘图函数.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数学建模-插值">
+<meta property="og:url" content="http://yoursite.com/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="插值是指在离散数据的基础上补插连续函数，使得这条连续曲线通过全部给定的离散数据点. 显然，插值的目标是构建通过已知点的插值函数，并不一定要求总体趋势上的一致性. 本文主要通过Matlab实现一维插值、二维插值，并介绍相关绘图函数.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/ex5-1.jpg">
+<meta property="og:image" content="http://yoursite.com/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/ex5-2.jpg">
+<meta property="og:image" content="http://yoursite.com/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/ex5-3.jpg">
+<meta property="og:image" content="http://yoursite.com/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/ex5-4.jpg">
+<meta property="article:published_time" content="2020-07-10T07:15:46.000Z">
+<meta property="article:modified_time" content="2020-07-10T09:00:28.066Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/ex5-1.jpg">
+    
+
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/open-sans/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    
+<script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>categories</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            MATLAB
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/%E7%AC%AC2%E7%AB%A0%E4%B9%A0%E9%A2%98/">第2章习题</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            数学建模
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B-%E7%81%AB%E7%AE%AD%E5%8F%91%E5%B0%84%E6%A8%A1%E5%9E%8B/">微分方程模型-火箭发射模型</a></li>  <li class="file"><a href="/wiki/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B-%E4%BA%BA%E5%8F%A3%E6%A8%A1%E5%9E%8B/">微分方程模型-人口模型</a></li>  <li class="file"><a href="/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%AE%B2%E5%BA%A7-%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E5%BA%94%E7%94%A8/">数学建模讲座-概率统计方法应用</a></li>  <li class="file"><a href="/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%AE%B2%E5%BA%A7-%E8%BF%90%E7%AD%B9%E5%AD%A6%EF%BC%9A%E6%A8%A1%E5%9E%8B%E3%80%81%E7%90%86%E8%AE%BA%E3%80%81%E7%AE%97%E6%B3%95/">数学建模讲座-运筹学：模型、理论、算法</a></li>  <li class="file active"><a href="/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/">数学建模-插值</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            杂项
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/hexo%E5%8F%91%E5%B8%83%E6%8C%87%E5%8D%97/">hexo发布指南</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            枪炮、病菌与钢铁
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/%E5%89%8D%E8%A8%80%EF%BC%9A%E8%80%B6%E5%88%A9%E7%9A%84%E9%97%AE%E9%A2%98/">前言：耶利的问题</a></li>  <li class="file"><a href="/wiki/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86-%E4%BB%8E%E4%BC%8A%E7%94%B8%E5%9B%AD%E5%88%B0%E5%8D%A1%E5%93%88%E9%A9%AC%E5%8D%A1/">第一部分 从伊甸园到卡哈马卡</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-数学建模-插值" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/">数学建模</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/">
+            <time datetime="2020-07-10T07:15:46.000Z" itemprop="datePublished">2020-07-10</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a href="https://github.com/moses3415/moses3415/raw/writing/source/_posts/数学建模-插值.md" target="_blank" rel="external nofollow noopener noreferrer"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/moses3415/moses3415/edit/writing/source/_posts/数学建模-插值.md" target="_blank" rel="external nofollow noopener noreferrer"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/moses3415/moses3415/commits/writing/source/_posts/数学建模-插值.md" target="_blank" rel="external nofollow noopener noreferrer"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            数学建模-插值
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">Catalogue</strong>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#插值概述"><span class="toc-number">1.</span> <span class="toc-text">插值概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#分段线性插值函数"><span class="toc-number">1.1.</span> <span class="toc-text">分段线性插值函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#拉格朗日（Lagrange）插值函数"><span class="toc-number">1.2.</span> <span class="toc-text">拉格朗日（Lagrange）插值函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#样条插值函数"><span class="toc-number">1.3.</span> <span class="toc-text">样条插值函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Matlab-一维插值"><span class="toc-number">2.</span> <span class="toc-text">Matlab 一维插值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Matlab二维插值"><span class="toc-number">3.</span> <span class="toc-text">Matlab二维插值</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#插值节点为网格节点"><span class="toc-number">3.1.</span> <span class="toc-text">插值节点为网格节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插值节点为散乱节点"><span class="toc-number">3.2.</span> <span class="toc-text">插值节点为散乱节点</span></a></li></ol></li></ol>
+                </div>
+            
+        
+        
+            <p>插值是指在离散数据的基础上补插连续函数，使得这条连续曲线通过全部给定的离散数据点.</p>
+<p>显然，插值的目标是构建通过已知点的插值函数，并不一定要求总体趋势上的一致性.</p>
+<p>本文主要通过Matlab实现一维插值、二维插值，并介绍相关绘图函数.<br><a id="more"></a></p>
+<h2 id="插值概述"><a href="#插值概述" class="headerlink" title="插值概述"></a>插值概述</h2><p>插值函数可粗略分为三种：分段线性插值函数，拉格朗日插值函数和样条插值函数</p>
+<h3 id="分段线性插值函数"><a href="#分段线性插值函数" class="headerlink" title="分段线性插值函数"></a>分段线性插值函数</h3><p>直观上，分段线性插值函数就是将给定的相邻个点之间用直线连接，所形成的折线段分段函数</p>
+<p>线性插值方法原理简单，容易实现，但给定点过少时拐角化明显，当给定点密集时效果较好</p>
+<h3 id="拉格朗日（Lagrange）插值函数"><a href="#拉格朗日（Lagrange）插值函数" class="headerlink" title="拉格朗日（Lagrange）插值函数"></a>拉格朗日（Lagrange）插值函数</h3><p>Lagrange插值法的思想是将插值函数构造转化为若干个基函数，当插值点增多时拟合效果一般会变好，但存在龙格现象，使差值局部严重畸变.</p>
+<h3 id="样条插值函数"><a href="#样条插值函数" class="headerlink" title="样条插值函数"></a>样条插值函数</h3><p>样条插值方法要求构造出的函数光滑性好，不仅连续，而且曲率连续.根据样条函数高阶连续可导条件可确定样条函数的次数，比如分段线性插值函数就是一次样条插值.常用的样条插值函数一般为三次.</p>
+<h2 id="Matlab-一维插值"><a href="#Matlab-一维插值" class="headerlink" title="Matlab 一维插值"></a>Matlab 一维插值</h2><p>一维插值指节点为一维变量，插值函数是一元函数（曲线）</p>
+<p>Matlab 中可使用两个函数实现一维插值：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">% 方法一，method 默认为线性插值</span><br><span class="line">y &#x3D; interpl(x0,y0,x,&#39;method&#39;);</span><br><span class="line"></span><br><span class="line">% 方法二，condas 默认为 Langrange边界条件，若无边界条件，最常用的方法是采用非扭结（not - a knot）条件</span><br><span class="line">pp &#x3D; csape(x0,y0,condas,valconds);</span><br><span class="line">y &#x3D; fnval(pp,x);</span><br></pre></td></tr></table></figure>
+<p>下面根据两个实例对不同的插值方法进行实现及可视化，结果如下图：<br><img src="/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/ex5-1.jpg" alt="Matlab 一维插值 1"></p>
+<p><img src="/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/ex5-2.jpg" alt="Matlab 一维插值 2"></p>
+<h2 id="Matlab二维插值"><a href="#Matlab二维插值" class="headerlink" title="Matlab二维插值"></a>Matlab二维插值</h2><p>二维插值指节点为二维变量，插值函数为二元函数（曲面），最终可得到三维等高线图</p>
+<h3 id="插值节点为网格节点"><a href="#插值节点为网格节点" class="headerlink" title="插值节点为网格节点"></a>插值节点为网格节点</h3><p>网格节点指传递给对应函数的节点坐标是递增的</p>
+<p>类似一维插值的函数，但需要注意的是 interp2 函数中 z0 为 n*m 矩阵，而 csape 函数中z0 为 m*n 矩阵，绘图时需要注意是否转置</p>
+<p>下面根据一个实例对不同的插值方法进行实现及可视化，结果如下图：<br><img src="/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/ex5-3.jpg" alt="Matlab 二维插值 1"></p>
+<h3 id="插值节点为散乱节点"><a href="#插值节点为散乱节点" class="headerlink" title="插值节点为散乱节点"></a>插值节点为散乱节点</h3><p>散乱节点指传递给对应函数的节点坐标是无序的</p>
+<p>Matlab 提供了插值函数 griddata</p>
+<p>下面根据一个实例对不同的插值方法进行实现及可视化，结果如下图：<br><img src="/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/ex5-4.jpg" alt="Matlab 二维插值 2"></p>
+<p>需要注意的是，Matlab 外插值不确定，这里使用最近点插值替换的方法补充</p>
+<blockquote>
+<p>参考：数学建模算法与应用（第2版），司守奎，孙兆亮：第5章 插值与拟合，5.1 插值方法</p>
+<p>附MATLAB代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">% ex5_1 </span><br><span class="line">$ 对x0，y0数据进行插值，画出曲线，并求出x-0处曲线斜率和13&lt;&#x3D;x&lt;&#x3D;15范围内y的最小值</span><br><span class="line"></span><br><span class="line">x0&#x3D;[0   3   5   7   9   11   12   13   14  15];</span><br><span class="line">y0&#x3D;[0  1.2  1.7  2.0  2.1  2.0  1.8  1.2   1.0  1.6];</span><br><span class="line">x&#x3D;0:0.1:15;</span><br><span class="line">y1&#x3D;interp1(x0,y0,x);                        %线性插值</span><br><span class="line">y2&#x3D;interp1(x0,y0,x,&#39;nearest&#39;);              %最近项插值</span><br><span class="line">y3&#x3D;interp1(x0,y0,x,&#39;spline&#39;);               %立方样条插值</span><br><span class="line"></span><br><span class="line">pp1&#x3D;csape(x0,y0);                           %三次样条插值：Lagrange边界条件</span><br><span class="line">y4&#x3D;fnval(pp1,x);</span><br><span class="line"></span><br><span class="line">pp2&#x3D;csape(x0,y0,&#39;second&#39;);                  %三次样条插值：二阶导数边界条件                  </span><br><span class="line">y5&#x3D;fnval(pp2,x);</span><br><span class="line"></span><br><span class="line">pp2&#x3D;csape(x0,y0,&#39;complete&#39;);                %三次样条插值：一阶导数边界条件                  </span><br><span class="line">y6&#x3D;fnval(pp2,x);</span><br><span class="line"></span><br><span class="line">pp2&#x3D;csape(x0,y0,&#39;not - a - knot&#39;);          %三次样条插值：非扭结条件                  </span><br><span class="line">y7&#x3D;fnval(pp2,x);</span><br><span class="line"></span><br><span class="line">pp2&#x3D;csape(x0,y0,&#39;periodic&#39;);                %三次样条插值：周期条件                  </span><br><span class="line">y8&#x3D;fnval(pp2,x);</span><br><span class="line"></span><br><span class="line">[x&#39;,y1&#39;,y2&#39;,y3&#39;,y4&#39;,y5&#39;,y6&#39;,y7&#39;,y8&#39;]</span><br><span class="line"></span><br><span class="line">subplot(2,4,1)</span><br><span class="line">plot(x0,y0,&#39;+&#39;,x,y1)</span><br><span class="line">title(&#39;Piecewise linear&#39;)</span><br><span class="line">subplot(2,4,2)</span><br><span class="line">plot(x0,y0,&#39;+&#39;,x,y2)</span><br><span class="line">title(&#39;nearest&#39;)</span><br><span class="line">subplot(2,4,3)</span><br><span class="line">plot(x0,y0,&#39;+&#39;,x,y3)</span><br><span class="line">title(&#39;Spline1&#39;)</span><br><span class="line">subplot(2,4,4)</span><br><span class="line">plot(x0,y0,&#39;+&#39;,x,y4)</span><br><span class="line">title(&#39;Spline2&#39;)</span><br><span class="line">subplot(2,4,5)</span><br><span class="line">plot(x0,y0,&#39;+&#39;,x,y5)</span><br><span class="line">title(&#39;Spline3 second&#39;)</span><br><span class="line">subplot(2,4,6)</span><br><span class="line">plot(x0,y0,&#39;+&#39;,x,y6)</span><br><span class="line">title(&#39;Spline4 complete&#39;)</span><br><span class="line">subplot(2,4,7)</span><br><span class="line">plot(x0,y0,&#39;+&#39;,x,y7)</span><br><span class="line">title(&#39;Spline5 not - a - knot&#39;)</span><br><span class="line">subplot(2,4,8)</span><br><span class="line">plot(x0,y0,&#39;+&#39;,x,y8)</span><br><span class="line">title(&#39;Spline6 periodic&#39;)</span><br><span class="line"></span><br><span class="line">dx&#x3D;diff(x);</span><br><span class="line">dy&#x3D;diff(y4);</span><br><span class="line">dy_dx&#x3D;dy.&#x2F;dx;</span><br><span class="line">dy_dx0&#x3D;dy_dx(1)</span><br><span class="line">ytemp&#x3D;y4(131:151);</span><br><span class="line">ymin&#x3D;min(ytemp);</span><br><span class="line">index&#x3D;find(y4&#x3D;&#x3D;ymin);</span><br><span class="line">xmin&#x3D;x(index);</span><br><span class="line">[xmin,ymin]</span><br></pre></td></tr></table></figure><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">% ex5_2</span><br><span class="line">% 对x0，y0数据进行插值，画出曲线，并求出区间积分</span><br><span class="line"></span><br><span class="line">clc, clear</span><br><span class="line">x0&#x3D;0.15:0.01:0.18;</span><br><span class="line">y0&#x3D;[3.5	1.5	2.5	2.8];</span><br><span class="line">x&#x3D;0.15:0.001:0.18;</span><br><span class="line">pp&#x3D;csape(x0,y0)   %默认的边界条件，Lagrange边界条件</span><br><span class="line">y1&#x3D;fnval(pp,x);</span><br><span class="line">format long g</span><br><span class="line">xishu&#x3D;pp.coefs   %显示每个区间上三次多项式的系数</span><br><span class="line">s&#x3D;integral(@(t)ppval(pp,t),0.15,0.18)  %求积分</span><br><span class="line">format  %恢复短小数的显示格式</span><br><span class="line"></span><br><span class="line">scatter(x0,y0);</span><br><span class="line">hold on</span><br><span class="line">plot(x,y1)</span><br><span class="line">hold off</span><br><span class="line">grid on</span><br><span class="line">title(&#39;v(t)-t三次样条插值&#39;)</span><br><span class="line">xlabel(&#39;t&#39;);</span><br><span class="line">ylabel(&#39;v(t)&#39;);</span><br></pre></td></tr></table></figure><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">% ex5_3</span><br><span class="line">% 实现二维插值，并找出最高点的坐标和高程</span><br><span class="line"></span><br><span class="line">clear,clc</span><br><span class="line">x0&#x3D;100:100:500;</span><br><span class="line">y0&#x3D;100:100:400;</span><br><span class="line">z&#x3D;[636    697    624    478   450  </span><br><span class="line">   698    712    630    478   420</span><br><span class="line">   680    674    598    412   400</span><br><span class="line">   662    626    552    334   310];</span><br><span class="line"></span><br><span class="line">pp&#x3D;csape(&#123;x0,y0&#125;,z&#39;)                %三次样条插值</span><br><span class="line">xi&#x3D;100:10:500;yi&#x3D;100:10:400;</span><br><span class="line">cz&#x3D;fnval(pp,&#123;xi,yi&#125;);</span><br><span class="line"></span><br><span class="line">z&#x3D;interp2(x0,y0,z,xi,yi&#39;);             %线性插值</span><br><span class="line"></span><br><span class="line">[i,j]&#x3D;find(cz&#x3D;&#x3D;max(max(cz)))        %找最高点的地址</span><br><span class="line">x0&#x3D;xi(i),y0&#x3D;yi(j),zmax&#x3D;cz(i,j)      %求最高点的坐标 </span><br><span class="line"></span><br><span class="line">subplot(2,4,1)</span><br><span class="line">contour(xi,yi,cz&#39;,&#39;ShowText&#39;,&#39;on&#39;)  %二维等高线图</span><br><span class="line">subplot(2,4,2)</span><br><span class="line">contour3(xi,yi,cz&#39;,100)             %三维等高线图</span><br><span class="line">subplot(2,4,3)</span><br><span class="line">mesh(xi,yi,cz&#39;)                     %三维网格曲面图</span><br><span class="line">subplot(2,4,4)</span><br><span class="line">meshz(xi,yi,cz&#39;)                    %三维网格曲面帷幕图</span><br><span class="line"></span><br><span class="line">subplot(2,4,5)</span><br><span class="line">contour(xi,yi,z,&#39;ShowText&#39;,&#39;on&#39;)  %二维等高线图</span><br><span class="line">subplot(2,4,6)</span><br><span class="line">contour3(xi,yi,z,100)             %三维等高线图</span><br><span class="line">subplot(2,4,7)</span><br><span class="line">mesh(xi,yi,z)                     %三维网格曲面图</span><br><span class="line">subplot(2,4,8)</span><br><span class="line">meshz(xi,yi,z)                    %三维网格曲面帷幕图</span><br></pre></td></tr></table></figure><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">% ex5_4</span><br><span class="line">% 散乱节点二维插值绘图</span><br><span class="line"></span><br><span class="line">clc, clear</span><br><span class="line">x&#x3D;[129,140,103.5,88,185.5,195,105,157.5,107.5,77,81,162,162,117.5];</span><br><span class="line">y&#x3D;[7.5,141.5,23,147,22.5,137.5,85.5,-6.5,-81,3,56.5,-66.5,84,-33.5];</span><br><span class="line">z&#x3D;-[4,8,6,8,6,8,8,9,9,8,8,9,4,9];</span><br><span class="line">xmm&#x3D;minmax(x)  %求x的最小值和最大值</span><br><span class="line">ymm&#x3D;minmax(y)  %求y的最小值和最大值</span><br><span class="line">xi&#x3D;xmm(1):xmm(2);</span><br><span class="line">yi&#x3D;ymm(1):ymm(2);</span><br><span class="line">zi1&#x3D;griddata(x,y,z,xi,yi&#39;,&#39;cubic&#39;); %立方插值</span><br><span class="line">zi2&#x3D;griddata(x,y,z,xi,yi&#39;,&#39;nearest&#39;); %最近点插值</span><br><span class="line">zi&#x3D;zi1;  %立方插值和最近点插值的混合插值的初始值</span><br><span class="line">zi(isnan(zi1))&#x3D;zi2(isnan(zi1))  %把立方插值中的不确定值换成最近点插值的结果</span><br><span class="line">scatter3(x,y,z,&#39;mo&#39;)     %绘制三维散点图</span><br><span class="line">hold on </span><br><span class="line">mesh(xi,yi,zi)      %绘制三维曲面图</span><br><span class="line">legend(&#39;Sample Points&#39;,&#39;Interpolated Surface&#39;,&#39;Location&#39;,&#39;NorthWest&#39;)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+    
+        <a href="/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%AE%B2%E5%BA%A7-%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E5%BA%94%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Older</strong>
+            <div class="article-nav-title">数学建模讲座-概率统计方法应用</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            John Doe &copy; 2020 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" target="_blank" rel="external nofollow noopener noreferrer">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
