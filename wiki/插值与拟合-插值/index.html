@@ -3,28 +3,28 @@
 <head>
     <meta charset="utf-8">
     
-    <title>数学建模-插值 | Hexo</title>
+    <title>插值与拟合-插值 | Hexo</title>
     
     
-        <meta name="keywords" content="数学建模-插值">
+        <meta name="keywords" content="插值与拟合-插值">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="插值是指在离散数据的基础上补插连续函数，使得这条连续曲线通过全部给定的离散数据点. 显然，插值的目标是构建通过已知点的插值函数，并不一定要求总体趋势上的一致性. 本文主要通过Matlab实现一维插值、二维插值，并介绍相关绘图函数.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数学建模-插值">
-<meta property="og:url" content="http://yoursite.com/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/index.html">
+<meta property="og:title" content="插值与拟合-插值">
+<meta property="og:url" content="http://yoursite.com/wiki/%E6%8F%92%E5%80%BC%E4%B8%8E%E6%8B%9F%E5%90%88-%E6%8F%92%E5%80%BC/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="插值是指在离散数据的基础上补插连续函数，使得这条连续曲线通过全部给定的离散数据点. 显然，插值的目标是构建通过已知点的插值函数，并不一定要求总体趋势上的一致性. 本文主要通过Matlab实现一维插值、二维插值，并介绍相关绘图函数.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/ex5-1.jpg">
-<meta property="og:image" content="http://yoursite.com/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/ex5-2.jpg">
-<meta property="og:image" content="http://yoursite.com/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/ex5-3.jpg">
-<meta property="og:image" content="http://yoursite.com/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/ex5-4.jpg">
+<meta property="og:image" content="http://yoursite.com/wiki/%E6%8F%92%E5%80%BC%E4%B8%8E%E6%8B%9F%E5%90%88-%E6%8F%92%E5%80%BC/ex5-1.jpg">
+<meta property="og:image" content="http://yoursite.com/wiki/%E6%8F%92%E5%80%BC%E4%B8%8E%E6%8B%9F%E5%90%88-%E6%8F%92%E5%80%BC/ex5-2.jpg">
+<meta property="og:image" content="http://yoursite.com/wiki/%E6%8F%92%E5%80%BC%E4%B8%8E%E6%8B%9F%E5%90%88-%E6%8F%92%E5%80%BC/ex5-3.jpg">
+<meta property="og:image" content="http://yoursite.com/wiki/%E6%8F%92%E5%80%BC%E4%B8%8E%E6%8B%9F%E5%90%88-%E6%8F%92%E5%80%BC/ex5-4.jpg">
 <meta property="article:published_time" content="2020-07-10T07:15:46.000Z">
-<meta property="article:modified_time" content="2020-07-10T09:16:49.929Z">
+<meta property="article:modified_time" content="2020-07-10T09:28:43.840Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/ex5-1.jpg">
+<meta name="twitter:image" content="http://yoursite.com/wiki/%E6%8F%92%E5%80%BC%E4%B8%8E%E6%8B%9F%E5%90%88-%E6%8F%92%E5%80%BC/ex5-1.jpg">
     
 
     
@@ -197,7 +197,7 @@
                             &nbsp;
                             数学建模
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B-%E7%81%AB%E7%AE%AD%E5%8F%91%E5%B0%84%E6%A8%A1%E5%9E%8B/">微分方程模型-火箭发射模型</a></li>  <li class="file"><a href="/wiki/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B-%E4%BA%BA%E5%8F%A3%E6%A8%A1%E5%9E%8B/">微分方程模型-人口模型</a></li>  <li class="file"><a href="/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%AE%B2%E5%BA%A7-%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E5%BA%94%E7%94%A8/">数学建模讲座-概率统计方法应用</a></li>  <li class="file"><a href="/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%AE%B2%E5%BA%A7-%E8%BF%90%E7%AD%B9%E5%AD%A6%EF%BC%9A%E6%A8%A1%E5%9E%8B%E3%80%81%E7%90%86%E8%AE%BA%E3%80%81%E7%AE%97%E6%B3%95/">数学建模讲座-运筹学：模型、理论、算法</a></li>  <li class="file active"><a href="/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/">数学建模-插值</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B-%E7%81%AB%E7%AE%AD%E5%8F%91%E5%B0%84%E6%A8%A1%E5%9E%8B/">微分方程模型-火箭发射模型</a></li>  <li class="file"><a href="/wiki/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B-%E4%BA%BA%E5%8F%A3%E6%A8%A1%E5%9E%8B/">微分方程模型-人口模型</a></li>  <li class="file"><a href="/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%AE%B2%E5%BA%A7-%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E5%BA%94%E7%94%A8/">数学建模讲座-概率统计方法应用</a></li>  <li class="file"><a href="/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%AE%B2%E5%BA%A7-%E8%BF%90%E7%AD%B9%E5%AD%A6%EF%BC%9A%E6%A8%A1%E5%9E%8B%E3%80%81%E7%90%86%E8%AE%BA%E3%80%81%E7%AE%97%E6%B3%95/">数学建模讲座-运筹学：模型、理论、算法</a></li>  <li class="file active"><a href="/wiki/%E6%8F%92%E5%80%BC%E4%B8%8E%E6%8B%9F%E5%90%88-%E6%8F%92%E5%80%BC/">插值与拟合-插值</a></li>  <li class="file"><a href="/wiki/%E6%8F%92%E5%80%BC%E4%B8%8E%E6%8B%9F%E5%90%88-%E6%8B%9F%E5%90%88/">插值与拟合-拟合</a></li>  <li class="file"><a href="/wiki/%E9%9D%9E%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92/">非线性规划</a></li>  <li class="file"><a href="/wiki/%E5%9B%BE%E4%B8%8E%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B%E5%8F%8A%E6%96%B9%E6%B3%95/">图与网络模型及方法</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -288,7 +288,7 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
-            <section id="main"><article id="post-数学建模-插值" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-插值与拟合-插值" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -305,7 +305,7 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/">
+        <a href="/wiki/%E6%8F%92%E5%80%BC%E4%B8%8E%E6%8B%9F%E5%90%88-%E6%8F%92%E5%80%BC/">
             <time datetime="2020-07-10T07:15:46.000Z" itemprop="datePublished">2020-07-10</time>
         </a>
     </div>
@@ -317,13 +317,13 @@
                         
                         
                             <div class="article-meta-button">
-                                <a href="https://github.com/moses3415/moses3415/raw/writing/source/_posts/数学建模-插值.md" target="_blank" rel="external nofollow noopener noreferrer"> Source </a>
+                                <a href="https://github.com/moses3415/moses3415/raw/writing/source/_posts/插值与拟合-插值.md" target="_blank" rel="external nofollow noopener noreferrer"> Source </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href="https://github.com/moses3415/moses3415/edit/writing/source/_posts/数学建模-插值.md" target="_blank" rel="external nofollow noopener noreferrer"> Edit </a>
+                                <a href="https://github.com/moses3415/moses3415/edit/writing/source/_posts/插值与拟合-插值.md" target="_blank" rel="external nofollow noopener noreferrer"> Edit </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href="https://github.com/moses3415/moses3415/commits/writing/source/_posts/数学建模-插值.md" target="_blank" rel="external nofollow noopener noreferrer"> History </a>
+                                <a href="https://github.com/moses3415/moses3415/commits/writing/source/_posts/插值与拟合-插值.md" target="_blank" rel="external nofollow noopener noreferrer"> History </a>
                             </div>
                         
                     </div>
@@ -331,7 +331,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            数学建模-插值
+            插值与拟合-插值
         </h1>
     
 
@@ -362,18 +362,18 @@
 <h2 id="Matlab-一维插值"><a href="#Matlab-一维插值" class="headerlink" title="Matlab 一维插值"></a>Matlab 一维插值</h2><p>一维插值指节点为一维变量，插值函数是一元函数（曲线）</p>
 <p>Matlab 中可使用两个函数实现一维插值：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">% 方法一，method 默认为线性插值</span><br><span class="line">y &#x3D; interpl(x0,y0,x,&#39;method&#39;);</span><br><span class="line"></span><br><span class="line">% 方法二，condas 默认为 Langrange边界条件，若无边界条件，最常用的方法是采用非扭结（not - a knot）条件</span><br><span class="line">pp &#x3D; csape(x0,y0,condas,valconds);</span><br><span class="line">y &#x3D; fnval(pp,x);</span><br></pre></td></tr></table></figure>
-<p>下面根据两个实例对不同的插值方法进行实现及可视化，结果如下图：<br><img src="/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/ex5-1.jpg" alt="Matlab 一维插值 1"></p>
-<p><img src="/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/ex5-2.jpg" alt="Matlab 一维插值 2"></p>
+<p>下面根据两个实例对不同的插值方法进行实现及可视化，结果如下图：<br><img src="/wiki/%E6%8F%92%E5%80%BC%E4%B8%8E%E6%8B%9F%E5%90%88-%E6%8F%92%E5%80%BC/ex5-1.jpg" alt="Matlab 一维插值 1"></p>
+<p><img src="/wiki/%E6%8F%92%E5%80%BC%E4%B8%8E%E6%8B%9F%E5%90%88-%E6%8F%92%E5%80%BC/ex5-2.jpg" alt="Matlab 一维插值 2"></p>
 <h2 id="Matlab二维插值"><a href="#Matlab二维插值" class="headerlink" title="Matlab二维插值"></a>Matlab二维插值</h2><p>二维插值指节点为二维变量，插值函数为二元函数（曲面），最终可得到三维等高线图</p>
 <h3 id="插值节点为网格节点"><a href="#插值节点为网格节点" class="headerlink" title="插值节点为网格节点"></a>插值节点为网格节点</h3><p>网格节点指传递给对应函数的节点坐标是递增的</p>
 <p>类似一维插值的函数，但需要注意的是 interp2 函数中 z0 为 n*m 矩阵，而 csape 函数中z0 为 m*n 矩阵，绘图时需要注意是否转置</p>
-<p>下面根据一个实例对不同的插值方法进行实现及可视化，结果如下图：<br><img src="/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/ex5-3.jpg" alt="Matlab 二维插值 1"></p>
+<p>下面根据一个实例对不同的插值方法进行实现及可视化，结果如下图：<br><img src="/wiki/%E6%8F%92%E5%80%BC%E4%B8%8E%E6%8B%9F%E5%90%88-%E6%8F%92%E5%80%BC/ex5-3.jpg" alt="Matlab 二维插值 1"></p>
 <h3 id="插值节点为散乱节点"><a href="#插值节点为散乱节点" class="headerlink" title="插值节点为散乱节点"></a>插值节点为散乱节点</h3><p>散乱节点指传递给对应函数的节点坐标是无序的</p>
 <p>Matlab 提供了插值函数 griddata</p>
-<p>下面根据一个实例对不同的插值方法进行实现及可视化，结果如下图：<br><img src="/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1-%E6%8F%92%E5%80%BC/ex5-4.jpg" alt="Matlab 二维插值 2"></p>
+<p>下面根据一个实例对不同的插值方法进行实现及可视化，结果如下图：<br><img src="/wiki/%E6%8F%92%E5%80%BC%E4%B8%8E%E6%8B%9F%E5%90%88-%E6%8F%92%E5%80%BC/ex5-4.jpg" alt="Matlab 二维插值 2"></p>
 <p>需要注意的是，Matlab 外插值不确定，这里使用最近点插值替换的方法补充</p>
 <blockquote>
-<p>参考：数学建模算法与应用（第2版），司守奎，孙兆亮：第5章 插值与拟合，5.1 插值方法</p>
+<p>参考：数学建模算法与应用（第2版），司守奎，孙兆亮：第5章 插值与拟合</p>
 <p>附MATLAB代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">% ex5_1 </span><br><span class="line">$ 对x0，y0数据进行插值，画出曲线，并求出x-0处曲线斜率和13&lt;&#x3D;x&lt;&#x3D;15范围内y的最小值</span><br><span class="line"></span><br><span class="line">x0&#x3D;[0   3   5   7   9   11   12   13   14  15];</span><br><span class="line">y0&#x3D;[0  1.2  1.7  2.0  2.1  2.0  1.8  1.2   1.0  1.6];</span><br><span class="line">x&#x3D;0:0.1:15;</span><br><span class="line">y1&#x3D;interp1(x0,y0,x);                        %线性插值</span><br><span class="line">y2&#x3D;interp1(x0,y0,x,&#39;nearest&#39;);              %最近项插值</span><br><span class="line">y3&#x3D;interp1(x0,y0,x,&#39;spline&#39;);               %立方样条插值</span><br><span class="line"></span><br><span class="line">pp1&#x3D;csape(x0,y0);                           %三次样条插值：Lagrange边界条件</span><br><span class="line">y4&#x3D;fnval(pp1,x);</span><br><span class="line"></span><br><span class="line">pp2&#x3D;csape(x0,y0,&#39;second&#39;);                  %三次样条插值：二阶导数边界条件                  </span><br><span class="line">y5&#x3D;fnval(pp2,x);</span><br><span class="line"></span><br><span class="line">pp2&#x3D;csape(x0,y0,&#39;complete&#39;);                %三次样条插值：一阶导数边界条件                  </span><br><span class="line">y6&#x3D;fnval(pp2,x);</span><br><span class="line"></span><br><span class="line">pp2&#x3D;csape(x0,y0,&#39;not - a - knot&#39;);          %三次样条插值：非扭结条件                  </span><br><span class="line">y7&#x3D;fnval(pp2,x);</span><br><span class="line"></span><br><span class="line">pp2&#x3D;csape(x0,y0,&#39;periodic&#39;);                %三次样条插值：周期条件                  </span><br><span class="line">y8&#x3D;fnval(pp2,x);</span><br><span class="line"></span><br><span class="line">[x&#39;,y1&#39;,y2&#39;,y3&#39;,y4&#39;,y5&#39;,y6&#39;,y7&#39;,y8&#39;]</span><br><span class="line"></span><br><span class="line">subplot(2,4,1)</span><br><span class="line">plot(x0,y0,&#39;+&#39;,x,y1)</span><br><span class="line">title(&#39;Piecewise linear&#39;)</span><br><span class="line">subplot(2,4,2)</span><br><span class="line">plot(x0,y0,&#39;+&#39;,x,y2)</span><br><span class="line">title(&#39;nearest&#39;)</span><br><span class="line">subplot(2,4,3)</span><br><span class="line">plot(x0,y0,&#39;+&#39;,x,y3)</span><br><span class="line">title(&#39;Spline1&#39;)</span><br><span class="line">subplot(2,4,4)</span><br><span class="line">plot(x0,y0,&#39;+&#39;,x,y4)</span><br><span class="line">title(&#39;Spline2&#39;)</span><br><span class="line">subplot(2,4,5)</span><br><span class="line">plot(x0,y0,&#39;+&#39;,x,y5)</span><br><span class="line">title(&#39;Spline3 second&#39;)</span><br><span class="line">subplot(2,4,6)</span><br><span class="line">plot(x0,y0,&#39;+&#39;,x,y6)</span><br><span class="line">title(&#39;Spline4 complete&#39;)</span><br><span class="line">subplot(2,4,7)</span><br><span class="line">plot(x0,y0,&#39;+&#39;,x,y7)</span><br><span class="line">title(&#39;Spline5 not - a - knot&#39;)</span><br><span class="line">subplot(2,4,8)</span><br><span class="line">plot(x0,y0,&#39;+&#39;,x,y8)</span><br><span class="line">title(&#39;Spline6 periodic&#39;)</span><br><span class="line"></span><br><span class="line">dx&#x3D;diff(x);</span><br><span class="line">dy&#x3D;diff(y4);</span><br><span class="line">dy_dx&#x3D;dy.&#x2F;dx;</span><br><span class="line">dy_dx0&#x3D;dy_dx(1)</span><br><span class="line">ytemp&#x3D;y4(131:151);</span><br><span class="line">ymin&#x3D;min(ytemp);</span><br><span class="line">index&#x3D;find(y4&#x3D;&#x3D;ymin);</span><br><span class="line">xmin&#x3D;x(index);</span><br><span class="line">[xmin,ymin]</span><br></pre></td></tr></table></figure><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">% ex5_2</span><br><span class="line">% 对x0，y0数据进行插值，画出曲线，并求出区间积分</span><br><span class="line"></span><br><span class="line">clc, clear</span><br><span class="line">x0&#x3D;0.15:0.01:0.18;</span><br><span class="line">y0&#x3D;[3.5	1.5	2.5	2.8];</span><br><span class="line">x&#x3D;0.15:0.001:0.18;</span><br><span class="line">pp&#x3D;csape(x0,y0)   %默认的边界条件，Lagrange边界条件</span><br><span class="line">y1&#x3D;fnval(pp,x);</span><br><span class="line">format long g</span><br><span class="line">xishu&#x3D;pp.coefs   %显示每个区间上三次多项式的系数</span><br><span class="line">s&#x3D;integral(@(t)ppval(pp,t),0.15,0.18)  %求积分</span><br><span class="line">format  %恢复短小数的显示格式</span><br><span class="line"></span><br><span class="line">scatter(x0,y0);</span><br><span class="line">hold on</span><br><span class="line">plot(x,y1)</span><br><span class="line">hold off</span><br><span class="line">grid on</span><br><span class="line">title(&#39;v(t)-t三次样条插值&#39;)</span><br><span class="line">xlabel(&#39;t&#39;);</span><br><span class="line">ylabel(&#39;v(t)&#39;);</span><br></pre></td></tr></table></figure><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">% ex5_3</span><br><span class="line">% 实现二维插值，并找出最高点的坐标和高程</span><br><span class="line"></span><br><span class="line">clear,clc</span><br><span class="line">x0&#x3D;100:100:500;</span><br><span class="line">y0&#x3D;100:100:400;</span><br><span class="line">z&#x3D;[636    697    624    478   450  </span><br><span class="line">   698    712    630    478   420</span><br><span class="line">   680    674    598    412   400</span><br><span class="line">   662    626    552    334   310];</span><br><span class="line"></span><br><span class="line">pp&#x3D;csape(&#123;x0,y0&#125;,z&#39;)                %三次样条插值</span><br><span class="line">xi&#x3D;100:10:500;yi&#x3D;100:10:400;</span><br><span class="line">cz&#x3D;fnval(pp,&#123;xi,yi&#125;);</span><br><span class="line"></span><br><span class="line">z&#x3D;interp2(x0,y0,z,xi,yi&#39;);             %线性插值</span><br><span class="line"></span><br><span class="line">[i,j]&#x3D;find(cz&#x3D;&#x3D;max(max(cz)))        %找最高点的地址</span><br><span class="line">x0&#x3D;xi(i),y0&#x3D;yi(j),zmax&#x3D;cz(i,j)      %求最高点的坐标 </span><br><span class="line"></span><br><span class="line">subplot(2,4,1)</span><br><span class="line">contour(xi,yi,cz&#39;,&#39;ShowText&#39;,&#39;on&#39;)  %二维等高线图</span><br><span class="line">subplot(2,4,2)</span><br><span class="line">contour3(xi,yi,cz&#39;,100)             %三维等高线图</span><br><span class="line">subplot(2,4,3)</span><br><span class="line">mesh(xi,yi,cz&#39;)                     %三维网格曲面图</span><br><span class="line">subplot(2,4,4)</span><br><span class="line">meshz(xi,yi,cz&#39;)                    %三维网格曲面帷幕图</span><br><span class="line"></span><br><span class="line">subplot(2,4,5)</span><br><span class="line">contour(xi,yi,z,&#39;ShowText&#39;,&#39;on&#39;)  %二维等高线图</span><br><span class="line">subplot(2,4,6)</span><br><span class="line">contour3(xi,yi,z,100)             %三维等高线图</span><br><span class="line">subplot(2,4,7)</span><br><span class="line">mesh(xi,yi,z)                     %三维网格曲面图</span><br><span class="line">subplot(2,4,8)</span><br><span class="line">meshz(xi,yi,z)                    %三维网格曲面帷幕图</span><br></pre></td></tr></table></figure><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">% ex5_4</span><br><span class="line">% 散乱节点二维插值绘图</span><br><span class="line"></span><br><span class="line">clc, clear</span><br><span class="line">x&#x3D;[129,140,103.5,88,185.5,195,105,157.5,107.5,77,81,162,162,117.5];</span><br><span class="line">y&#x3D;[7.5,141.5,23,147,22.5,137.5,85.5,-6.5,-81,3,56.5,-66.5,84,-33.5];</span><br><span class="line">z&#x3D;-[4,8,6,8,6,8,8,9,9,8,8,9,4,9];</span><br><span class="line">xmm&#x3D;minmax(x)  %求x的最小值和最大值</span><br><span class="line">ymm&#x3D;minmax(y)  %求y的最小值和最大值</span><br><span class="line">xi&#x3D;xmm(1):xmm(2);</span><br><span class="line">yi&#x3D;ymm(1):ymm(2);</span><br><span class="line">zi1&#x3D;griddata(x,y,z,xi,yi&#39;,&#39;cubic&#39;); %立方插值</span><br><span class="line">zi2&#x3D;griddata(x,y,z,xi,yi&#39;,&#39;nearest&#39;); %最近点插值</span><br><span class="line">zi&#x3D;zi1;  %立方插值和最近点插值的混合插值的初始值</span><br><span class="line">zi(isnan(zi1))&#x3D;zi2(isnan(zi1))  %把立方插值中的不确定值换成最近点插值的结果</span><br><span class="line">scatter3(x,y,z,&#39;mo&#39;)     %绘制三维散点图</span><br><span class="line">hold on </span><br><span class="line">mesh(xi,yi,zi)      %绘制三维曲面图</span><br><span class="line">legend(&#39;Sample Points&#39;,&#39;Interpolated Surface&#39;,&#39;Location&#39;,&#39;NorthWest&#39;)</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 
@@ -387,6 +387,15 @@
 
     
 <nav id="article-nav">
+    
+        <a href="/wiki/%E6%8F%92%E5%80%BC%E4%B8%8E%E6%8B%9F%E5%90%88-%E6%8B%9F%E5%90%88/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    插值与拟合-拟合
+                
+            </div>
+        </a>
     
     
         <a href="/wiki/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E8%AE%B2%E5%BA%A7-%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E5%BA%94%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
