@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/wiki/%E8%81%9A%E7%B1%BB%E5%88%86%E6%9E%90/</loc>
+    
+    <lastmod>2020-07-24T04:00:40.287Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/wiki/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/</loc>
+    
+    <lastmod>2020-07-17T02:47:14.345Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/wiki/%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB%E7%AE%97%E6%B3%95/</loc>
     
-    <lastmod>2020-07-16T05:22:23.611Z</lastmod>
+    <lastmod>2020-07-17T02:45:59.329Z</lastmod>
     
   </url>
   
