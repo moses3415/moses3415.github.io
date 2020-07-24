@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-24T07:13:11.939Z</updated>
+  <updated>2020-07-24T08:12:31.085Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,16 +21,18 @@
     <link href="http://yoursite.com/wiki/2-web-%E7%A8%8B%E5%BA%8F%E7%9A%84%E8%AE%BF%E9%97%AE%E6%B5%81%E7%A8%8B/"/>
     <id>http://yoursite.com/wiki/2-web-%E7%A8%8B%E5%BA%8F%E7%9A%84%E8%AE%BF%E9%97%AE%E6%B5%81%E7%A8%8B/</id>
     <published>2020-07-24T06:39:21.000Z</published>
-    <updated>2020-07-24T07:13:11.939Z</updated>
+    <updated>2020-07-24T08:12:31.085Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><a id="more"></a><div class="row">    <embed src="web程序的访问流程.pdf" width="100%" height="550" type="application/pdf"></div><blockquote><p>参考视频：28天PHP零基础入门到精通教程（P1基础6天）<br><a href="https://www.bilibili.com/video/BV18x411H7qD?p=3" target="_blank" rel="external nofollow noopener noreferrer">https://www.bilibili.com/video/BV18x411H7qD?p=3</a><br><a href="https://www.bilibili.com/video/BV18x411H7qD?p=4" target="_blank" rel="external nofollow noopener noreferrer">https://www.bilibili.com/video/BV18x411H7qD?p=4</a></p></blockquote>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Questions:</p><ol><li>URL</li><li>URI</li><li>本地 DNS 和网络 DNS</li><li>动态网站访问新增的内容<a id="more"></a></li></ol><div class="row">    <embed src="web程序的访问流程.pdf" width="100%" height="550" type="application/pdf"></div><blockquote><p>参考视频：28天PHP零基础入门到精通教程（P1基础6天）<br><a href="https://www.bilibili.com/video/BV18x411H7qD?p=3" target="_blank" rel="external nofollow noopener noreferrer">https://www.bilibili.com/video/BV18x411H7qD?p=3</a><br><a href="https://www.bilibili.com/video/BV18x411H7qD?p=4" target="_blank" rel="external nofollow noopener noreferrer">https://www.bilibili.com/video/BV18x411H7qD?p=4</a></p></blockquote>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
+      &lt;p&gt;Questions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;URL&lt;/li&gt;
+&lt;li&gt;URI&lt;/li&gt;
+&lt;li&gt;本地 DNS 和网络 DNS&lt;/li&gt;
+&lt;li&gt;动态网站访问新增的内容&lt;/li&gt;&lt;/ol&gt;
     
     </summary>
     
@@ -47,16 +49,22 @@
     <link href="http://yoursite.com/wiki/1-PHP-%E7%AE%80%E4%BB%8B%E4%B8%8E%E7%BD%91%E7%AB%99%E6%A6%82%E5%BF%B5/"/>
     <id>http://yoursite.com/wiki/1-PHP-%E7%AE%80%E4%BB%8B%E4%B8%8E%E7%BD%91%E7%AB%99%E6%A6%82%E5%BF%B5/</id>
     <published>2020-07-24T06:38:53.000Z</published>
-    <updated>2020-07-24T07:13:06.245Z</updated>
+    <updated>2020-07-24T08:09:36.897Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><a id="more"></a><div class="row">    <embed src="PHP简介与网站概念.pdf" width="100%" height="550" type="application/pdf"></div><blockquote><p>参考视频：28天PHP零基础入门到精通教程（P1基础6天）<br><a href="https://www.bilibili.com/video/BV18x411H7qD?p=1" target="_blank" rel="external nofollow noopener noreferrer">https://www.bilibili.com/video/BV18x411H7qD?p=1</a><br><a href="https://www.bilibili.com/video/BV18x411H7qD?p=2" target="_blank" rel="external nofollow noopener noreferrer">https://www.bilibili.com/video/BV18x411H7qD?p=2</a></p></blockquote>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Questions:</p><ol><li>PHP 的属性</li><li>PHP 全称</li><li>静态网站和动态网站：区别，后缀</li><li>服务器</li><li>IP</li><li>域名（Domain Name）</li><li>DNS</li><li>端口（port）<a id="more"></a></li></ol><div class="row">    <embed src="PHP简介与网站概念.pdf" width="100%" height="550" type="application/pdf"></div><blockquote><p>参考视频：28天PHP零基础入门到精通教程（P1基础6天）<br><a href="https://www.bilibili.com/video/BV18x411H7qD?p=1" target="_blank" rel="external nofollow noopener noreferrer">https://www.bilibili.com/video/BV18x411H7qD?p=1</a><br><a href="https://www.bilibili.com/video/BV18x411H7qD?p=2" target="_blank" rel="external nofollow noopener noreferrer">https://www.bilibili.com/video/BV18x411H7qD?p=2</a></p></blockquote>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
+      &lt;p&gt;Questions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;PHP 的属性&lt;/li&gt;
+&lt;li&gt;PHP 全称&lt;/li&gt;
+&lt;li&gt;静态网站和动态网站：区别，后缀&lt;/li&gt;
+&lt;li&gt;服务器&lt;/li&gt;
+&lt;li&gt;IP&lt;/li&gt;
+&lt;li&gt;域名（Domain Name）&lt;/li&gt;
+&lt;li&gt;DNS&lt;/li&gt;
+&lt;li&gt;端口（port）&lt;/li&gt;&lt;/ol&gt;
     
     </summary>
     
