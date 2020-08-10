@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-24T08:12:31.085Z</updated>
+  <updated>2020-08-10T07:58:00.480Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,224 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>1.10经济学、科学和工程中的线性模型</title>
+    <link href="http://yoursite.com/wiki/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/1-10%E7%BB%8F%E6%B5%8E%E5%AD%A6%E3%80%81%E7%A7%91%E5%AD%A6%E5%92%8C%E5%B7%A5%E7%A8%8B%E4%B8%AD%E7%9A%84%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/"/>
+    <id>http://yoursite.com/wiki/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/1-10%E7%BB%8F%E6%B5%8E%E5%AD%A6%E3%80%81%E7%A7%91%E5%AD%A6%E5%92%8C%E5%B7%A5%E7%A8%8B%E4%B8%AD%E7%9A%84%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/</id>
+    <published>2020-08-10T07:58:00.000Z</published>
+    <updated>2020-08-10T07:58:00.480Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote><ul><li><a href></a></li><li><a href></a></li></ul></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="线性代数及其应用" scheme="http://yoursite.com/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>1.9线性变换的矩阵</title>
+    <link href="http://yoursite.com/wiki/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/1-9%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2%E7%9A%84%E7%9F%A9%E9%98%B5/"/>
+    <id>http://yoursite.com/wiki/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/1-9%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2%E7%9A%84%E7%9F%A9%E9%98%B5/</id>
+    <published>2020-08-10T07:57:42.000Z</published>
+    <updated>2020-08-10T07:57:42.350Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote><ul><li><a href></a></li><li><a href></a></li></ul></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="线性代数及其应用" scheme="http://yoursite.com/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>1.8线性变换介绍</title>
+    <link href="http://yoursite.com/wiki/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/1-8%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2%E4%BB%8B%E7%BB%8D/"/>
+    <id>http://yoursite.com/wiki/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/1-8%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2%E4%BB%8B%E7%BB%8D/</id>
+    <published>2020-08-10T07:57:25.000Z</published>
+    <updated>2020-08-10T07:57:25.306Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote><ul><li><a href></a></li><li><a href></a></li></ul></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="线性代数及其应用" scheme="http://yoursite.com/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>1.7线性无关</title>
+    <link href="http://yoursite.com/wiki/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/1-7%E7%BA%BF%E6%80%A7%E6%97%A0%E5%85%B3/"/>
+    <id>http://yoursite.com/wiki/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/1-7%E7%BA%BF%E6%80%A7%E6%97%A0%E5%85%B3/</id>
+    <published>2020-08-10T07:57:12.000Z</published>
+    <updated>2020-08-10T07:57:12.187Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote><ul><li><a href></a></li><li><a href></a></li></ul></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="线性代数及其应用" scheme="http://yoursite.com/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>1.5线性方程组的解集</title>
+    <link href="http://yoursite.com/wiki/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/1-5%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E8%A7%A3%E9%9B%86/"/>
+    <id>http://yoursite.com/wiki/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/1-5%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E8%A7%A3%E9%9B%86/</id>
+    <published>2020-08-10T07:56:54.000Z</published>
+    <updated>2020-08-10T07:56:54.986Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote><ul><li><a href></a></li><li><a href></a></li></ul></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="线性代数及其应用" scheme="http://yoursite.com/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>1.4矩阵方程Ax=b</title>
+    <link href="http://yoursite.com/wiki/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/1-4%E7%9F%A9%E9%98%B5%E6%96%B9%E7%A8%8BAx-b/"/>
+    <id>http://yoursite.com/wiki/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/1-4%E7%9F%A9%E9%98%B5%E6%96%B9%E7%A8%8BAx-b/</id>
+    <published>2020-08-10T07:56:30.000Z</published>
+    <updated>2020-08-10T07:56:30.302Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote><ul><li><a href></a></li><li><a href></a></li></ul></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="线性代数及其应用" scheme="http://yoursite.com/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>1.3向量方程</title>
+    <link href="http://yoursite.com/wiki/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/1-3%E5%90%91%E9%87%8F%E6%96%B9%E7%A8%8B/"/>
+    <id>http://yoursite.com/wiki/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/1-3%E5%90%91%E9%87%8F%E6%96%B9%E7%A8%8B/</id>
+    <published>2020-08-10T07:56:05.000Z</published>
+    <updated>2020-08-10T07:56:05.091Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote><ul><li><a href></a></li><li><a href></a></li></ul></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="线性代数及其应用" scheme="http://yoursite.com/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>1.2行化简与阶梯形矩阵</title>
+    <link href="http://yoursite.com/wiki/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/1-2%E8%A1%8C%E5%8C%96%E7%AE%80%E4%B8%8E%E9%98%B6%E6%A2%AF%E5%BD%A2%E7%9F%A9%E9%98%B5/"/>
+    <id>http://yoursite.com/wiki/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/1-2%E8%A1%8C%E5%8C%96%E7%AE%80%E4%B8%8E%E9%98%B6%E6%A2%AF%E5%BD%A2%E7%9F%A9%E9%98%B5/</id>
+    <published>2020-08-10T07:55:34.000Z</published>
+    <updated>2020-08-10T07:55:34.863Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote><ul><li><a href></a></li><li><a href></a></li></ul></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="线性代数及其应用" scheme="http://yoursite.com/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>1-1线性方程组</title>
+    <link href="http://yoursite.com/wiki/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/1-1%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/"/>
+    <id>http://yoursite.com/wiki/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/1-1%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/</id>
+    <published>2020-08-10T07:54:41.000Z</published>
+    <updated>2020-08-10T08:02:41.128Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><a id="more"></a><div class="row">    <embed src="1-1线性方程组.pdf" width="100%" height="550" type="application/pdf"></div><blockquote><p>参考书籍：《线性代数及其应用》，原书第4版，机械工业出版社，第1章 线性代数中的线性方程组</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="线性代数及其应用" scheme="http://yoursite.com/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/"/>
+    
+    
+      <category term="study notes" scheme="http://yoursite.com/tags/study-notes/"/>
+    
+  </entry>
   
   <entry>
     <title>2.web 程序的访问流程</title>
@@ -300,158 +518,6 @@
     
     
       <category term="讲座" scheme="http://yoursite.com/tags/%E8%AE%B2%E5%BA%A7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微分方程模型-人口模型</title>
-    <link href="http://yoursite.com/wiki/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B-%E4%BA%BA%E5%8F%A3%E6%A8%A1%E5%9E%8B/"/>
-    <id>http://yoursite.com/wiki/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B-%E4%BA%BA%E5%8F%A3%E6%A8%A1%E5%9E%8B/</id>
-    <published>2020-07-06T14:21:12.000Z</published>
-    <updated>2020-07-10T09:14:38.715Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:50%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/6-piano-pieces-op-118-2-intermezzo-in-a/1452538772?i=1452539299"></iframe><p>人口模型主要关注人口数量随着时间如何由增长率决定，根据增长率的不同模型可以分为马尔萨斯（Malthus）模型和阻滞增长模型（Logistic 模型），另一个问题是如何利用已有的人口历史数据预测未来的人口，这涉及到参数估计问题.<br><a id="more"></a></p><h2 id="马尔萨斯（Malthus）模型"><a href="#马尔萨斯（Malthus）模型" class="headerlink" title="马尔萨斯（Malthus）模型"></a>马尔萨斯（Malthus）模型</h2><h3 id="模型假设"><a href="#模型假设" class="headerlink" title="模型假设"></a>模型假设</h3><ol><li>$x(t)$：$t$ 年的人口数，连续可微</li><li>$r$：人口增长率，为常数</li><li>不存在迁入迁出，每个个体相同<h3 id="建模分析"><a href="#建模分析" class="headerlink" title="建模分析"></a>建模分析</h3>由假设，人口增量：<script type="math/tex; mode=display">x(t+\Delta t)-x(t) = rx(t)\Delta t</script>得：<script type="math/tex; mode=display">\begin{cases}\dfrac{dx}{dt}=rx \\x(0) = x_0\end{cases}</script>解得：<script type="math/tex; mode=display">x(t) = x_0e^{rt}</script>通过MATLAB绘图如下：($x_0=10,r=0.1,t\in[0,100]$)</li></ol><p><img src="/wiki/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B-%E4%BA%BA%E5%8F%A3%E6%A8%A1%E5%9E%8B/pic1.jpg" alt="Malthus模型"></p><p>$r&gt;0$ 时长期来看$x(t)$趋于无穷，不符合实际情况</p><h2 id="阻滞增长模型（Logistic-模型）"><a href="#阻滞增长模型（Logistic-模型）" class="headerlink" title="阻滞增长模型（Logistic 模型）"></a>阻滞增长模型（Logistic 模型）</h2><h3 id="模型假设-1"><a href="#模型假设-1" class="headerlink" title="模型假设"></a>模型假设</h3><ol><li>$r=r(x)$，且为线性减函数，即$r(x)=r_0-sx$</li><li>自然条件限制$\max x(t)=x_m$，此时$r(x_m)=0$<h3 id="建模分析-1"><a href="#建模分析-1" class="headerlink" title="建模分析"></a>建模分析</h3><script type="math/tex; mode=display">\begin{cases}\dfrac{dx}{dt}=r_0(1-\dfrac{x}{x_m})x \\x(0) = x_0\end{cases}</script>分离变量解得：<script type="math/tex; mode=display">x(t) =\frac{x_m}{1+(\dfrac{x_m}{x_0}-1)e^{-rt}}</script>分析可得以下规律：</li><li>$\lim\limits_{x \to \infty}x(t) = x_m$，即无论初始人口数量为多少，最终达到平衡</li><li>x(t)单调递增，$x=\dfrac{x_m}{2}$为拐点，此时人口增长速率最大，通过MATLAB绘图如下：($x_m=100,x_0=10,r=0.1,t\in[0,100]$)</li></ol><p><img src="/wiki/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B-%E4%BA%BA%E5%8F%A3%E6%A8%A1%E5%9E%8B/pic2.jpg" alt="Logistic模型"></p><h2 id="人口预报"><a href="#人口预报" class="headerlink" title="人口预报"></a>人口预报</h2><h3 id="建模与求解"><a href="#建模与求解" class="headerlink" title="建模与求解"></a>建模与求解</h3><p>数据是1790-2000年美国人口的统计数据（单位：百万人），建立Logistic模型：</p><script type="math/tex; mode=display">\begin{cases}\dfrac{dx}{dt}=r_0(1-\dfrac{x}{x_m})x \\x(t_0) = x_0\end{cases}</script><script type="math/tex; mode=display">\Rightarrow x(t) =\frac{x_m}{1+(\dfrac{x_m}{x_0}-1)e^{-r(t-t_0)}}</script><h3 id="参数估计"><a href="#参数估计" class="headerlink" title="参数估计"></a>参数估计</h3><h4 id="非线性最小二乘估计"><a href="#非线性最小二乘估计" class="headerlink" title="非线性最小二乘估计"></a>非线性最小二乘估计</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">clc, clear</span><br><span class="line">a&#x3D;textread(&#39;data4.txt&#39;); %把原始数据保存在纯文本文件data4.txt中</span><br><span class="line">x&#x3D;a([2:2:6],:)&#39;;   %提出人口数据</span><br><span class="line">x&#x3D;nonzeros(x);  %去掉后面的零，并变成列向量</span><br><span class="line">t&#x3D;[1790:10:2000]&#39;;</span><br><span class="line">t0&#x3D;t(1); x0&#x3D;x(1);</span><br><span class="line">fun&#x3D;@(cs,td)cs(1).&#x2F;(1+(cs(1)&#x2F;x0-1)*exp(-cs(2)*(td-t0))); %cs(1)&#x3D;xm,cs(2)&#x3D;r</span><br><span class="line">cs&#x3D;lsqcurvefit(fun,rand(2,1),t(2:end),x(2:end),zeros(2,1))</span><br><span class="line">xhat&#x3D;fun(cs,[t;2010])  %预测已知年代和2010年的人口</span><br></pre></td></tr></table></figure><p>最后得到：$x_m=342.4382,r=0.0274,2010$年预测人口数为$282.6784$百万人</p><h4 id="线性最小二乘法"><a href="#线性最小二乘法" class="headerlink" title="线性最小二乘法"></a>线性最小二乘法</h4><p>向后差分：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">clc, clear</span><br><span class="line">a&#x3D;textread(&#39;data4.txt&#39;); %把原始数据保存在纯文本文件data4.txt中</span><br><span class="line">x&#x3D;a([2:2:6],:)&#39;; x&#x3D;nonzeros(x);</span><br><span class="line">t&#x3D;[1790:10:2000]&#39;;</span><br><span class="line">a&#x3D;[ones(21,1), -x(2:end)]; </span><br><span class="line">b&#x3D;diff(x).&#x2F;x(2:end)&#x2F;10;</span><br><span class="line">cs&#x3D;a\b;</span><br><span class="line">r&#x3D;cs(1), xm&#x3D;r&#x2F;cs(2)</span><br></pre></td></tr></table></figure><br>求得：$x_m=373.5135,r=0.0247$<br>向前差分：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">clc, clear</span><br><span class="line">a&#x3D;textread(&#39;data4.txt&#39;); %把原始数据保存在纯文本文件data4.txt中</span><br><span class="line">x&#x3D;a([2:2:6],:)&#39;; x&#x3D;nonzeros(x);</span><br><span class="line">t&#x3D;[1790:10:2000]&#39;;</span><br><span class="line">a&#x3D;[ones(21,1), -x(1:end-1)]; </span><br><span class="line">b&#x3D;diff(x).&#x2F;x(1:end-1)&#x2F;10;</span><br><span class="line">cs&#x3D;a\b;</span><br><span class="line">r&#x3D;cs(1), xm&#x3D;r&#x2F;cs(2)</span><br></pre></td></tr></table></figure><br>求得：$x_m=294.3860,r=0.0325$</p><p>用以上不同方法得到的人口曲线和原始数据可视化如下图：</p><p><img src="/wiki/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B-%E4%BA%BA%E5%8F%A3%E6%A8%A1%E5%9E%8B/pic3.jpg" alt="人口预测"></p><blockquote><p>参考：数学建模算法与应用（第2版），司守奎，孙兆亮：第6章 微分方程建模，6.2 人口模型</p><p>MATLAB代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%Malthus模型%</span><br><span class="line">clc,clear</span><br><span class="line">ezplot(&#39;10*exp(0.1*t)&#39;,[0,100])</span><br></pre></td></tr></table></figure><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%Logistic模型%</span><br><span class="line">clc,clear</span><br><span class="line">ezplot(&#39;100&#x2F;(1+((100&#x2F;10)-1)*exp(-0.1*t))&#39;,[0,100])</span><br></pre></td></tr></table></figure><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">%美国人口预测%</span><br><span class="line">clc,clear</span><br><span class="line">a &#x3D; textread(&#39;data4.txt&#39;);</span><br><span class="line">y &#x3D; a([2:2:6],:)&#39;;</span><br><span class="line">y &#x3D; nonzeros(y);</span><br><span class="line">t &#x3D; [1790:10:2000]&#39;;</span><br><span class="line"></span><br><span class="line">x0 &#x3D; y(1);</span><br><span class="line">t0 &#x3D; t(1);</span><br><span class="line">xm1 &#x3D; 342.4382; xm2 &#x3D; 373.5135; xm3 &#x3D; 294.3860;</span><br><span class="line">r1 &#x3D; 0.0274; r2 &#x3D; 0.0247; r3 &#x3D; 0.0325;</span><br><span class="line"></span><br><span class="line">fplot(@(x) xm1&#x2F;(1+((xm1&#x2F;x0)-1).*exp(-r1.*(x-t0))),[1790,2020],&#39;Linewidth&#39;,2);</span><br><span class="line">hold on</span><br><span class="line">fplot(@(x) xm2&#x2F;(1+((xm2&#x2F;x0)-1).*exp(-r2.*(x-t0))),[1790,2020],&#39;--or&#39;);</span><br><span class="line">fplot(@(x) xm3&#x2F;(1+((xm3&#x2F;x0)-1).*exp(-r3.*(x-t0))),[1790,2020],&#39;-.*c&#39;);</span><br><span class="line">scatter(t,y)</span><br><span class="line">hold off</span><br><span class="line"></span><br><span class="line">grid on</span><br><span class="line">title(&#39;1790-2020美国人口预测&#39;)</span><br><span class="line">xlabel(&#39;年份&#39;);</span><br><span class="line">ylabel(&#39;人口（百万人）&#39;);</span><br></pre></td></tr></table></figure></p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;iframe allow=&quot;autoplay *; encrypted-media *;&quot; frameborder=&quot;0&quot; height=&quot;150&quot; style=&quot;width:50%;max-width:660px;overflow:hidden;background:transparent;&quot; sandbox=&quot;allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation&quot; src=&quot;https://embed.music.apple.com/cn/album/6-piano-pieces-op-118-2-intermezzo-in-a/1452538772?i=1452539299&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;人口模型主要关注人口数量随着时间如何由增长率决定，根据增长率的不同模型可以分为马尔萨斯（Malthus）模型和阻滞增长模型（Logistic 模型），另一个问题是如何利用已有的人口历史数据预测未来的人口，这涉及到参数估计问题.&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="数学建模" scheme="http://yoursite.com/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>微分方程模型-火箭发射模型</title>
-    <link href="http://yoursite.com/wiki/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B-%E7%81%AB%E7%AE%AD%E5%8F%91%E5%B0%84%E6%A8%A1%E5%9E%8B/"/>
-    <id>http://yoursite.com/wiki/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B-%E7%81%AB%E7%AE%AD%E5%8F%91%E5%B0%84%E6%A8%A1%E5%9E%8B/</id>
-    <published>2020-07-06T01:17:10.000Z</published>
-    <updated>2020-07-10T09:16:33.860Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:50%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/mazurkas-op-68-no-2-in-a-minor/941488216?i=941491221"></iframe><p>火箭发射问题是微分方程模型中的第一个模型，主要关注以下几个问题：</p><ol><li>火箭进入轨道需要达到的最小末速度</li><li>火箭推进力和末速度模型</li><li>一级火箭模型，理想火箭模型，多级火箭模型</li><li>火箭有效载荷的最优化<a id="more"></a><h2 id="发射最低末速度"><a href="#发射最低末速度" class="headerlink" title="发射最低末速度"></a>发射最低末速度</h2>根据牛顿第二定律：<script type="math/tex; mode=display">F = G\frac{Mm}{r^2}</script>地球表面有：$mg = F = G\dfrac{Mm}{R^2}$, 轨道上有：$G\dfrac{Mm}{R^2} = m\dfrac{v^2}{r}$<br>联立得：<script type="math/tex; mode=display">v = \sqrt{\frac{gR^2}{r}}</script>代入实际数据：$R=6400km, r-R=600km, g\approx9.81m/s^2$，得：<script type="math/tex; mode=display">v \approx 7.6km/s</script></li></ol><h2 id="火箭推进力及末速度模型"><a href="#火箭推进力及末速度模型" class="headerlink" title="火箭推进力及末速度模型"></a>火箭推进力及末速度模型</h2><h3 id="模型假设"><a href="#模型假设" class="headerlink" title="模型假设"></a>模型假设</h3><ol><li>火箭做直线运动，重力和空气阻力忽略不计</li><li>在$t$时刻火箭质量为$m(t)$，速度为$v(t)$，均为$t$的连续可微函数</li><li>火箭喷发气体相对火箭速度为常数$u$<h3 id="建模分析"><a href="#建模分析" class="headerlink" title="建模分析"></a>建模分析</h3>由泰勒展开：<script type="math/tex; mode=display">m(t+\Delta t)-m(t)=\frac{dm}{dt}\Delta t+\omicron(\Delta t)</script>由动量定理：<script type="math/tex; mode=display">m(t)v(t) = m(t+\Delta t)v(t+\Delta t) - [m(t+\Delta t)-m(t)][v(t)-u]</script><script type="math/tex; mode=display">\Rightarrow \frac{m(t+\Delta t)v(t+\Delta t)-m(t)v(t)}{\Delta t}=\frac{dm}{dt}[v(t)-u]</script><script type="math/tex; mode=display">\Rightarrow \frac{d(mv)}{dt} = \frac{dm}{dt}v(t)-u\frac{dm}{dt}</script><script type="math/tex; mode=display">\Rightarrow F = m\frac{dv}{dt} = -u\frac{dm}{dt}</script><script type="math/tex; mode=display">\Rightarrow \int_{v_0}^{v(t)}{\rm d}v = \int_{m_0}^{m(t)} -\frac{u}{m}{\rm d}m</script><script type="math/tex; mode=display">\Rightarrow v(t) = v_0+u\ln \frac{m_0}{m(t)}</script>要提高火箭末速度，在初速度$v_0$和火箭初质量$m_0$给定时，只能增大喷发气体速度$u$或减小末质量$m(t)$</li></ol><h2 id="一级火箭模型"><a href="#一级火箭模型" class="headerlink" title="一级火箭模型"></a>一级火箭模型</h2><h3 id="模型假设-1"><a href="#模型假设-1" class="headerlink" title="模型假设"></a>模型假设</h3><p>首先对一些变量常量做出定义：火箭初质量$m_0$，火箭有效负载$m_p$，火箭燃料质量$m_F$，火箭结构质量$m_s$</p><p>容易得到关系式：$m_0=m_p+m_F+m_s$<br>技术条件限制:$u=3km/s$及</p><script type="math/tex; mode=display">\frac{m_s}{m_F+m_s} \geqslant \frac{1}{9}</script><p>发射时初速度忽略不计，即$v_0=0$</p><h3 id="建模分析-1"><a href="#建模分析-1" class="headerlink" title="建模分析"></a>建模分析</h3><p>根据上述讨论可得末速度：</p><script type="math/tex; mode=display">v = u\ln\frac{m_0}{m_p+m_s}</script><p>令$m_s=\lambda(m_F+m_s)=\lambda(m_0-m_p)$，$\frac{1}{9}\leqslant\lambda\leqslant1$，代入上式可得：</p><script type="math/tex; mode=display">v = u\ln\frac{m_0}{\lambda m_0+(1-\lambda)m_p}</script><p>令$m_p=0$，得到火箭末速度上限：</p><script type="math/tex; mode=display">v_{max} = u\ln\frac{1}{\lambda}</script><p>代入数据可得：</p><script type="math/tex; mode=display">v_{max} \approx 6.6km/s < 7.6km/s</script><p>无法达到最低末速度</p><h2 id="理想火箭模型"><a href="#理想火箭模型" class="headerlink" title="理想火箭模型"></a>理想火箭模型</h2><h3 id="模型假设-2"><a href="#模型假设-2" class="headerlink" title="模型假设"></a>模型假设</h3><p>随着燃料燃烧，即$m_F$不断减少，$m_s$也随之被丢弃减少</p><p>假设质量减少的比例分别为$1-\alpha$和$\alpha$</p><p>考虑到空气阻力和重力等因素，发射最低末速度可以定为$10.5km/s$</p><h3 id="建模分析-2"><a href="#建模分析-2" class="headerlink" title="建模分析"></a>建模分析</h3><p>类似上文推导：</p><script type="math/tex; mode=display">m(t)v(t) = m(t+\Delta t)v(t+\Delta t) - (1-\alpha)[m(t+\Delta t)-m(t)][v(t)-u]-\alpha[m(t+\Delta t)-m(t)]v(t)</script><script type="math/tex; mode=display">\Rightarrow v = v_0+(1-\alpha)u\ln\frac{m_0}{m(t)}</script><p>卫星脱离火箭时：</p><script type="math/tex; mode=display">v_{max}=(1-\alpha)u\ln\frac{m_0}{m_p}</script><p>代入数据$v_{max}=10.5km/s$，$\alpha=0.1$，$u=3km/s$，可得：</p><script type="math/tex; mode=display">\frac{m_0}{m_p}\approx48.9</script><h2 id="多级火箭模型"><a href="#多级火箭模型" class="headerlink" title="多级火箭模型"></a>多级火箭模型</h2><h3 id="模型假设-3"><a href="#模型假设-3" class="headerlink" title="模型假设"></a>模型假设</h3><ol><li>第$i$级火箭结构质量$\lambda m_i$，燃料质量$(1-\lambda)m_i$</li><li>$u$对于各级火箭都相同</li><li>假设各个燃料级负载总质量与该燃料级脱离后质量之比为常数$k$（后面详述原因），即：<script type="math/tex; mode=display">k=\frac{m_1+m_2+\cdots+m_n+m_p}{m_2+m_3+\cdots+m_n+m_p}=\frac{m_2+m_3+\cdots+m_n+m_p}{m_3+m_4+\cdots+m_n+m_p}=\cdots</script><h3 id="建模分析-3"><a href="#建模分析-3" class="headerlink" title="建模分析"></a>建模分析</h3>对于二级火箭：<script type="math/tex; mode=display">v_1 = u\ln\frac{m_1+m_2+m_p}{\lambda m_1+m_2+m_p} = u\ln\frac{k}{\lambda (k-1)+1}</script><script type="math/tex; mode=display">v_2 = v_1 + u\ln\frac{m_2+m_p}{\lambda m_2+m_p} = 2u\ln\frac{k}{\lambda (k-1)+1}</script>取$u=3km/s$，$\lambda=0.1$，$v_2=10.5km/s$，代入得：<script type="math/tex; mode=display">k\approx 12.20</script><script type="math/tex; mode=display">\frac{m_0}{m_p}=k^2\approx 149</script></li></ol><p>对于假设3，需要分析何时$m_0/m_p$最小</p><p>记</p><script type="math/tex; mode=display">w_1 = m_0 = m_1 + m_2 +\cdots+ m_n + m_p</script><script type="math/tex; mode=display">w_2 = m_2 + m_3 +\cdots+ m_n + m_p</script><script type="math/tex; mode=display">\cdots</script><script type="math/tex; mode=display">w_{n+1} = m_p</script><script type="math/tex; mode=display">k_1 = \frac{w_1}{w_2}, \cdots, k_n = \frac{w_n}{w_{n+1}}</script><p>则</p><script type="math/tex; mode=display">v_n = u\ln(\frac{w_1}{\lambda m_1+w_2}\cdots\frac{w_n}{\lambda m_n+w_{n+1}})</script><script type="math/tex; mode=display">\Rightarrow v_n = u\ln(\frac{k_1}{\lambda(k_1-1)+1} \cdots\frac{k_n}{\lambda(k_n-1)+1})</script><p>问题转化为：</p><script type="math/tex; mode=display">\min \frac{m_0}{m_p} = k_1k_2 \cdots k_n</script><script type="math/tex; mode=display">\mathrm{ s.t. } \frac{k_1k_2\cdots k_n}{[\lambda(k_1-1)+1]\cdots[\lambda(k_n-1)+1]} = c</script><p>可以推出，当$k_1=k_2=\cdots=k_n$时，$m_0/m_p$最小，满足假设3</p><p>对于三级火箭，类似的有：</p><script type="math/tex; mode=display">v_3 = 3u\ln\frac{k}{\lambda (k-1)+1}</script><script type="math/tex; mode=display">k\approx 4.26</script><script type="math/tex; mode=display">\frac{m_0}{m_p}=k^3\approx 77</script><p>对于$n$级的火箭，有：</p><script type="math/tex; mode=display">v_n = nu\ln\frac{k}{\lambda (k-1)+1}</script><p>通过MATLAB绘图如下：<br><img src="/wiki/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8B-%E7%81%AB%E7%AE%AD%E5%8F%91%E5%B0%84%E6%A8%A1%E5%9E%8B/pic1.jpg" alt="n从2到100的图像"></p><p>当$n\to \infty$时，$v_n \to 50$</p><p>结论：随着火箭燃料级数的增多，$m_0/m_p$减小，加速相同质量$(m_p)$的载荷所需的火箭质量减少，理论上级数越多越好，但由于受到技术水平的限制，四级及以上的火箭经济效益方面不合算，因此目前多采用三级火箭。</p><blockquote><p>参考：数学建模算法与应用（第2版），司守奎，孙兆亮：第6章 微分方程建模，6.1 发射卫星为什么用三级火箭</p><p>附MATLAB代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">clc,clear</span><br><span class="line">n&#x3D;2;</span><br><span class="line">hold on</span><br><span class="line">while n&lt;100</span><br><span class="line">    k &#x3D; (0.9*exp(3.5&#x2F;n))&#x2F;(1-0.1*exp(3.5&#x2F;n));</span><br><span class="line">    y &#x3D; k^n;</span><br><span class="line">    plot(n,y,&#39;*k&#39;)</span><br><span class="line">    n&#x3D;n+1;</span><br><span class="line">end</span><br><span class="line">xlabel(&#39;n&#39;),ylabel(&#39;&#123;m_0&#125;&#x2F;&#123;m_p&#125;&#39;)</span><br></pre></td></tr></table></figure></p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;iframe allow=&quot;autoplay *; encrypted-media *;&quot; frameborder=&quot;0&quot; height=&quot;150&quot; style=&quot;width:50%;max-width:660px;overflow:hidden;background:transparent;&quot; sandbox=&quot;allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation&quot; src=&quot;https://embed.music.apple.com/cn/album/mazurkas-op-68-no-2-in-a-minor/941488216?i=941491221&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;火箭发射问题是微分方程模型中的第一个模型，主要关注以下几个问题：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;火箭进入轨道需要达到的最小末速度&lt;/li&gt;
-&lt;li&gt;火箭推进力和末速度模型&lt;/li&gt;
-&lt;li&gt;一级火箭模型，理想火箭模型，多级火箭模型&lt;/li&gt;
-&lt;li&gt;火箭有效载荷的最优化&lt;/li&gt;&lt;/ol&gt;
-    
-    </summary>
-    
-    
-      <category term="数学建模" scheme="http://yoursite.com/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>第一部分 从伊甸园到卡哈马卡</title>
-    <link href="http://yoursite.com/wiki/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86-%E4%BB%8E%E4%BC%8A%E7%94%B8%E5%9B%AD%E5%88%B0%E5%8D%A1%E5%93%88%E9%A9%AC%E5%8D%A1/"/>
-    <id>http://yoursite.com/wiki/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86-%E4%BB%8E%E4%BC%8A%E7%94%B8%E5%9B%AD%E5%88%B0%E5%8D%A1%E5%93%88%E9%A9%AC%E5%8D%A1/</id>
-    <published>2020-01-28T06:02:10.000Z</published>
-    <updated>2020-07-06T02:44:34.329Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><a id="more"></a><h2 id="第一章-走上起跑线"><a href="#第一章-走上起跑线" class="headerlink" title="第一章 走上起跑线"></a>第一章 走上起跑线</h2><p>人类进化简史：700万年前类人猿分化到13000年前上一次冰期结束</p><p>公元前ll000左右时某些大陆上的人类族群是否存在发展优势？</p><p>人类初始阶段的演化是在非洲进行的，约700万年前开始</p><p><img src="/wiki/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86-%E4%BB%8E%E4%BC%8A%E7%94%B8%E5%9B%AD%E5%88%B0%E5%8D%A1%E5%93%88%E9%A9%AC%E5%8D%A1/人类进化图谱.PNG" alt="人类进化图谱"></p><p><img src="/wiki/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86-%E4%BB%8E%E4%BC%8A%E7%94%B8%E5%9B%AD%E5%88%B0%E5%8D%A1%E5%93%88%E9%A9%AC%E5%8D%A1/人类在全世界的扩张.JPG" alt="人类在全世界的扩张"></p><p>澳大利亚／新几内亚的大型哺乳动被首批到达的人类杀光了或间接消灭了，原因在于在毫无演化准备的情况下遭遇狩猎技巧充分发展的现代人，导致了土著<strong>再也没有属于本地的驯化家畜</strong></p><p>同样在美洲这一情况发生在公元前11000年左右</p><h2 id="第二章-历史的自然实验"><a href="#第二章-历史的自然实验" class="headerlink" title="第二章 历史的自然实验"></a>第二章 历史的自然实验</h2><p>地理因素对波利尼西亚群岛社会发展的影响</p><p><img src="/wiki/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86-%E4%BB%8E%E4%BC%8A%E7%94%B8%E5%9B%AD%E5%88%B0%E5%8D%A1%E5%93%88%E9%A9%AC%E5%8D%A1/Pacific_Culture_Areas.png" alt="波利尼西亚群岛"></p><p>1835年毛利人（新西兰）与莫里奥里人（查塔姆群岛）的残酷冲突：众多的装备优良的人去对付很少的装备低劣的对手</p><p>Q：二者都源于1000年前的波利尼西亚人，但各自朝相反的方向演化？</p><p>A：对于整个波利尼西亚群岛这构成了一个<strong>自然实验</strong>，环境地理因素是唯一变量，具体有：</p><div class="table-container"><table><thead><tr><th>岛屿气候</th><th>地质类型</th><th>海洋资源</th><th>面积</th><th>地形的破碎和隔离程度</th></tr></thead><tbody><tr><td>从赤道到亚南极各种气候</td><td>珊瑚岛、石灰岩、火山岛等等</td><td>不同的海产量</td><td>从大到小</td><td>群岛和孤岛</td></tr><tr><td>降水量影响农业</td><td>提供石器原料，耕作土地和水源</td><td>提供狩猎采集资源</td><td>自然资源数量</td><td>交流沟通贸易的可能</td></tr></tbody></table></div><p>这些因素导致了人口密度的显著差异，而一般来说人口越多，密度越高，技术和组织就越复杂，专业程度就越高，再加上岛屿的面积、地形破碎程度和隔离程度，从而形成不同的社会复杂程度</p><h2 id="第三章-卡哈马卡的冲突"><a href="#第三章-卡哈马卡的冲突" class="headerlink" title="第三章 卡哈马卡的冲突"></a>第三章 卡哈马卡的冲突</h2><p>移民与土著冲突结果的原因：印加帝国和西班牙为例</p><p>西班牙征服者皮萨罗于卡哈马卡俘虏印加帝国皇帝阿塔瓦尔帕<br>168：80000</p><div class="table-container"><table><thead><tr><th>国家</th><th>军事优势</th><th>传染性流行病</th><th>航海技术</th><th>行政组织</th><th>文化传统</th></tr></thead><tbody><tr><td>西班牙</td><td>钢制武器、盔甲、枪炮、马匹</td><td>有免疫力</td><td>进行扩张</td><td>集中统一</td><td>文字</td></tr><tr><td>印加帝国</td><td>石器、青铜器、木棍、弹弓、护身软垫</td><td>无免疫力，天花导致内乱</td><td>无</td><td>专制君主</td><td>无，没有情报和经验</td></tr></tbody></table></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-      <category term="枪炮、病菌与钢铁" scheme="http://yoursite.com/categories/%E6%9E%AA%E7%82%AE%E3%80%81%E7%97%85%E8%8F%8C%E4%B8%8E%E9%92%A2%E9%93%81/"/>
-    
-    
-      <category term="reading notes" scheme="http://yoursite.com/tags/reading-notes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前言：耶利的问题</title>
-    <link href="http://yoursite.com/wiki/%E5%89%8D%E8%A8%80%EF%BC%9A%E8%80%B6%E5%88%A9%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>http://yoursite.com/wiki/%E5%89%8D%E8%A8%80%EF%BC%9A%E8%80%B6%E5%88%A9%E7%9A%84%E9%97%AE%E9%A2%98/</id>
-    <published>2020-01-28T05:43:18.000Z</published>
-    <updated>2020-07-06T08:18:54.746Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><a id="more"></a><h2 id="当今世界不同民族生活方式（文明程度）差异的原因？"><a href="#当今世界不同民族生活方式（文明程度）差异的原因？" class="headerlink" title="当今世界不同民族生活方式（文明程度）差异的原因？"></a>当今世界不同民族生活方式（文明程度）差异的原因？</h2><h3 id="现代世界财富和权力为什么这样分配？"><a href="#现代世界财富和权力为什么这样分配？" class="headerlink" title="现代世界财富和权力为什么这样分配？"></a>现代世界财富和权力为什么这样分配？</h3><p>【直接原因】公元1500年起，不同大陆上的民族业己在技术和政治组织方面存在着巨大的差异</p><h3 id="公元1500年各民族社会的形态差异的原因？"><a href="#公元1500年各民族社会的形态差异的原因？" class="headerlink" title="公元1500年各民族社会的形态差异的原因？"></a>公元1500年各民族社会的形态差异的原因？</h3><p>公元前11000年时各个大陆上的各个族群仍然都是靠狩猎采集为生的人，从公元前11000年到公元1500年， <strong>不同大陆的不同发展速度</strong>是差异的原因</p><h3 id="为什么在不同的大陆上人类发展速度不同？"><a href="#为什么在不同的大陆上人类发展速度不同？" class="headerlink" title="为什么在不同的大陆上人类发展速度不同？"></a>为什么在不同的大陆上人类发展速度不同？</h3><h4 id="反对这类问题"><a href="#反对这类问题" class="headerlink" title="反对这类问题"></a>反对这类问题</h4><pre><code>a.为强者辩护？打断因果锁链b.美化欧美c.粉饰“文明” 所谓的文明的福祉是由正反两方面的因素构成的</code></pre><h4 id="种族天生能力的差异"><a href="#种族天生能力的差异" class="headerlink" title="种族天生能力的差异"></a>种族天生能力的差异</h4><p>人类在智力上存在着差异，但并没有可靠的证据足以证明这种差异是与技术上的差异平行发生的</p><p>现在观察到的差异主要来源于社会环境、教育机会、从小的训练</p><p>不同种族智力的差异：影响智力的因素</p><div class="table-container"><table><thead><tr><th>欧洲</th><th>非洲</th></tr></thead><tbody><tr><td>传染性的流行疾病</td><td>谋杀、部落战争、意外事故</td></tr><tr><td>被动娱乐</td><td>积极活动</td></tr></tbody></table></div><h4 id="气候作用：高纬度地区寒冷气候的刺激"><a href="#气候作用：高纬度地区寒冷气候的刺激" class="headerlink" title="气候作用：高纬度地区寒冷气候的刺激"></a>气候作用：高纬度地区寒冷气候的刺激</h4><p>反例：美洲的情况正相反，文字、陶器、玛雅</p><h4 id="干燥气候下低地河谷：大规模灌溉系统导致集权政府机构"><a href="#干燥气候下低地河谷：大规模灌溉系统导致集权政府机构" class="headerlink" title="干燥气候下低地河谷：大规模灌溉系统导致集权政府机构"></a>干燥气候下低地河谷：大规模灌溉系统导致集权政府机构</h4><p>因果倒置</p><h4 id="欧洲的枪炮、传染病、工业品：直接原因"><a href="#欧洲的枪炮、传染病、工业品：直接原因" class="headerlink" title="欧洲的枪炮、传染病、工业品：直接原因"></a>欧洲的枪炮、传染病、工业品：直接原因</h4><h3 id="不同民族的历史遵循不同的道路前进，-其原因是民族环境的差异，而不是民族自身在生物学上的差异"><a href="#不同民族的历史遵循不同的道路前进，-其原因是民族环境的差异，而不是民族自身在生物学上的差异" class="headerlink" title="不同民族的历史遵循不同的道路前进， 其原因是民族环境的差异，而不是民族自身在生物学上的差异"></a>不同民族的历史遵循不同的道路前进， 其原因是民族环境的差异，而不是民族自身在生物学上的差异</h3>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-      <category term="枪炮、病菌与钢铁" scheme="http://yoursite.com/categories/%E6%9E%AA%E7%82%AE%E3%80%81%E7%97%85%E8%8F%8C%E4%B8%8E%E9%92%A2%E9%93%81/"/>
-    
-    
-      <category term="reading notes" scheme="http://yoursite.com/tags/reading-notes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第2章习题</title>
-    <link href="http://yoursite.com/wiki/%E7%AC%AC2%E7%AB%A0%E4%B9%A0%E9%A2%98/"/>
-    <id>http://yoursite.com/wiki/%E7%AC%AC2%E7%AB%A0%E4%B9%A0%E9%A2%98/</id>
-    <published>2020-01-24T01:36:30.000Z</published>
-    <updated>2020-07-06T02:44:26.574Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><a id="more"></a><p>(1) rand(), inv(), norm(), eye()<br>(2) subs()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; syms x s;</span><br><span class="line">&gt;&gt; f&#x3D;x^5+3*x^4+4*x^3+2*x^2+3*x+6;</span><br><span class="line">&gt;&gt; f&#x3D;subs(f,x,(s-1)&#x2F;(s+1))</span><br></pre></td></tr></table></figure><br>(3) simplify()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; syms k integer;</span><br><span class="line">&gt;&gt; simplify(sin(k*pi+pi&#x2F;6))</span><br></pre></td></tr></table></figure><br>(4) vpa(), log(), 换底公式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; vpa(sqrt(sym(2)),200)</span><br><span class="line">&gt;&gt; vpa((sym(11))^(sym(1&#x2F;6)),200)</span><br><span class="line">&gt;&gt; vpa(sin(sym(pi&#x2F;180)),200)</span><br><span class="line">&gt;&gt; vpa(exp(sym(2)),200)</span><br><span class="line">&gt;&gt; vpa(log(sym(21)),200)</span><br><span class="line">&gt;&gt; vpa(log(exp(sym(1)))&#x2F;log(sym(2)),200)</span><br></pre></td></tr></table></figure><br>(5) ①</p><p>(6) assume(), simplify()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; exp(sqrt(sym(-1))*sym(pi))+1</span><br></pre></td></tr></table></figure><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; syms a;</span><br><span class="line">&gt;&gt; syms k integer;</span><br><span class="line">&gt;&gt; assume(a~&#x3D;pi&#x2F;2+k*pi);</span><br><span class="line">&gt;&gt; simplify((1-2*sin(a)*cos(a))*(1+tan(a))-(cos(a)^2-sin(a)^2)*(1-tan(a)))</span><br></pre></td></tr></table></figure><br>(7) compose(f,g) = f(g(x))<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; syms x; f&#x3D;x^2-x-1;</span><br><span class="line">&gt;&gt; g&#x3D;f;for i&#x3D;1:10, g&#x3D;compose(f,g),end;</span><br><span class="line">&gt;&gt; simplify(g)</span><br></pre></td></tr></table></figure><br>结果太长无法完全显示，暂时没有找到解决方案</p><p>(8) </p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-      <category term="MATLAB" scheme="http://yoursite.com/categories/MATLAB/"/>
-    
-    
-      <category term="Exercise" scheme="http://yoursite.com/tags/Exercise/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo发布指南</title>
-    <link href="http://yoursite.com/wiki/hexo%E5%8F%91%E5%B8%83%E6%8C%87%E5%8D%97/"/>
-    <id>http://yoursite.com/wiki/hexo%E5%8F%91%E5%B8%83%E6%8C%87%E5%8D%97/</id>
-    <published>2020-01-19T10:11:53.000Z</published>
-    <updated>2020-07-10T09:16:26.654Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:50%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/nocturnes-op-48-no-1-in-c-minor/594180316?i=594180916"></iframe><p>本指南说明了使用hexo撰写并发布文章的过程方法<br><a id="more"></a></p><h2 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;title&quot;</span><br></pre></td></tr></table></figure><h2 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br></pre></td></tr></table></figure><h3 id="文字修饰"><a href="#文字修饰" class="headerlink" title="文字修饰"></a>文字修饰</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*斜体*</span><br><span class="line">**粗体**</span><br><span class="line">***加粗斜体***</span><br><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; 文字引用</span><br></pre></td></tr></table></figure><h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><p>单行使用`</p><p>多行使用```</p><h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$公式$$</span><br></pre></td></tr></table></figure><h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">***</span><br></pre></td></tr></table></figure><h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>使用1.  *   +   -</p><h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">表头1|表头2</span><br><span class="line">-|-|-</span><br><span class="line">内容11|内容12</span><br><span class="line">内容21|内容22</span><br></pre></td></tr></table></figure><h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[链接文字](链接地址 &quot;连接描述&quot;)</span><br><span class="line"></span><br><span class="line">&lt;链接地址&gt;</span><br></pre></td></tr></table></figure><h3 id="首页显示"><a href="#首页显示" class="headerlink" title="首页显示"></a>首页显示</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure><h2 id="部署发布"><a href="#部署发布" class="headerlink" title="部署发布"></a>部署发布</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure><h2 id="Latex支持"><a href="#Latex支持" class="headerlink" title="Latex支持"></a>Latex支持</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mathjax: true</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;iframe allow=&quot;autoplay *; encrypted-media *;&quot; frameborder=&quot;0&quot; height=&quot;150&quot; style=&quot;width:50%;max-width:660px;overflow:hidden;background:transparent;&quot; sandbox=&quot;allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation&quot; src=&quot;https://embed.music.apple.com/cn/album/nocturnes-op-48-no-1-in-c-minor/594180316?i=594180916&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;本指南说明了使用hexo撰写并发布文章的过程方法&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="杂项" scheme="http://yoursite.com/categories/%E6%9D%82%E9%A1%B9/"/>
-    
     
   </entry>
   
