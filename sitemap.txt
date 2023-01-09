@@ -1,7 +1,9 @@
 http://example.com/tags/index.html
 http://example.com/categories/index.html
 http://example.com/about/index.html
+http://example.com/2023/01/09/DSP/%E5%88%9D%E5%A7%8B%E5%8C%96/
 http://example.com/2023/01/09/%E6%96%87%E5%AD%A6%E7%90%86%E8%AE%BA/%E6%96%87%E5%AD%A6%E7%90%86%E8%AE%BA-%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E6%96%87%E5%AD%A6%E6%9C%AC%E8%B4%A8%E8%AE%BA%EF%BC%9A%E6%96%87%E5%AD%A6%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/
 http://example.com/2023/01/09/%E6%96%87%E5%AD%A6%E7%90%86%E8%AE%BA/%E6%96%87%E5%AD%A6%E7%90%86%E8%AE%BA-%E7%BB%AA%E8%AE%BA%EF%BC%9A%E4%BB%80%E4%B9%88%E6%98%AF%E7%90%86%E8%AE%BA%EF%BC%9F%E4%BB%80%E4%B9%88%E6%98%AF%E6%96%87%E5%AD%A6%E7%90%86%E8%AE%BA%EF%BC%9F/
 http://example.com/
+http://example.com/categories/DSP/
 http://example.com/categories/%E6%96%87%E5%AD%A6%E7%90%86%E8%AE%BA/
