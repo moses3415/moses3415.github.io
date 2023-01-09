@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-12-29T09:17:01.474Z</updated>
+  <updated>2023-01-09T08:39:01.883Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>test</title>
+    <link href="http://example.com/2023/01/09/test/"/>
+    <id>http://example.com/2023/01/09/test/</id>
+    <published>2023-01-09T08:39:01.000Z</published>
+    <updated>2023-01-09T08:39:01.883Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><blockquote><ul><li><a href=""></a></li><li><a href=""></a></li></ul></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/l</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>DSP 初始化</title>
     <link href="http://example.com/2023/01/09/DSP/%E5%88%9D%E5%A7%8B%E5%8C%96/"/>
     <id>http://example.com/2023/01/09/DSP/%E5%88%9D%E5%A7%8B%E5%8C%96/</id>
     <published>2023-01-09T08:35:49.157Z</published>
-    <updated>2022-12-29T09:17:01.474Z</updated>
+    <updated>2023-01-09T08:39:48.444Z</updated>
     
     <content type="html"><![CDATA[<p>Links:<br>Origin:<br><a href="https://blog.csdn.net/qq_34122861/article/details/110277648">TI DSP 28335 看门狗(WatchDog)及通过看门狗实现中断_战死为止的博客-CSDN博客_28335看门狗</a><br><a href="https://blog.csdn.net/qq_17525633/article/details/102414875">F28335第二篇——系统控制初始化_海洋想想的博客-CSDN博客_28335系统初始化</a><br><a href="zotero://select/items/@TMS320x2833xTMS320x2823xTechnical2020">@TMS320x2833xTMS320x2823xTechnical2020</a><br><a href="https://blog.csdn.net/lygoflying/article/details/50449227">TMS320F28335时钟（2） ——-外设时钟初始化详解_扶摇之上的博客-CSDN博客_tms320f28335</a></p><hr><h2 id="InitSysCtrl"><a href="#InitSysCtrl" class="headerlink" title="InitSysCtrl()"></a><code>InitSysCtrl()</code></h2><p>此函数将系统控制寄存器初始化为已知状态：</p><ul><li>禁用看门狗</li><li>为正确的 SYSCLKOUT 频率设置 PLLCR</li><li>为高频和低频外设时钟设置预分频器</li><li>启用外设时钟</li></ul><h3 id="DisableDog"><a href="#DisableDog" class="headerlink" title="DisableDog()"></a><code>DisableDog()</code></h3><p>关闭看门狗，具体：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">DisableDog</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    EALLOW;</span><br><span class="line">    SysCtrlRegs.WDCR = <span class="number">0x0068</span>;</span><br><span class="line">    EDIS;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><code>EALLOW</code> 和 <code>EDIS</code> 为汇编指令，用于设置和复位状态寄存器 1（ST1）的位 6 , 实现对关键寄存器的保护，包括器件仿真寄存器、FLASH 寄存器、CSM 寄存器、PIE 矢量表、系统控制寄存器、GPIOMux 寄存器等等</p><p>看门狗的功能是定期查看芯片内部的情况，一旦发生错误就向芯片发出重启信号。看门狗命令在程序的中断中拥有最高的优先级。</p><p>看门狗控制寄存器 Watchdog Control Register (WDCR)：<br>![[初始化.png]]<br>0x0068=01101000<br>即 WDDIS=1，禁止看门狗</p><hr><h3 id="InitPll-DSP28-PLLCR-DSP28-DIVSEL"><a href="#InitPll-DSP28-PLLCR-DSP28-DIVSEL" class="headerlink" title="InitPll(DSP28_PLLCR,DSP28_DIVSEL)"></a><code>InitPll(DSP28_PLLCR,DSP28_DIVSEL)</code></h3><p>设置系统时钟频率，主要为初始化 PLL 电路，实现低频信号的倍频、分频</p><p>程序流程：<sup><a href="#fn_1" id="reffn_1">1</a></sup><br>![[初始化-2.png|425]]</p><ol><li>确保时钟工作在有序状态；</li><li>先将 PLL 电路设置为 4 分频 (DIVSEL=0)；</li><li>设置 PLL 电路的倍频数 div；<ol><li>关闭时钟检测电路；</li><li>写入倍频数 div</li><li>关闭看门狗</li><li>等待 PLL 电路锁定 (若是没有关闭看门狗，则此步骤需要喂狗)</li><li>开启时钟检测电路</li></ol></li><li>设置分频数 divsel；<ol><li>若 divsel 为 1 或者 2，直接设置对应的分频数</li><li>若 divsel 为 3，则先设定为 2 分频，延时一段时间，再设定为 1 分频</li></ol></li></ol><p>F28335 的工作最高频率为 150MHz，而一般在电路设计中，一般采用的晶振频率为 30MHz。之所以不直接采用 150MHz 晶振，一方面是价格高昂，另一方面还要对电路做 EMI 处理。因此，为了让 DSP 能够工作在最高频率，需要对晶振信号频率进行 5 倍频处理。通常采用的方案是<strong>通过 PLL 电路先进行 10 倍频处理，再 2 分频处理</strong>。</p><p>函数形式参数在 DSP2833x_Examples. h 中定义，或修改：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> DSP28_PLLCR   15   <span class="comment">// PLL control register - val</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> DSP28_DIVSEL  2    <span class="comment">// divide select - divsel</span></span></span><br></pre></td></tr></table></figure><p>首先判断系统不在 limp mode (晶振信号丢失)，否则进行处理<br><code>asm(&quot;ESTOP0&quot;)</code> 表示停止仿真，用于 debug<br>实际工程可采用其他处理</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (SysCtrlRegs.PLLSTS.bit.MCLKSTS != <span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="comment">// Missing external clock has been detected</span></span><br><span class="line">    <span class="comment">// Replace this line with a call to an appropriate</span></span><br><span class="line">    <span class="comment">// SystemShutdown(); function.</span></span><br><span class="line">    <span class="keyword">asm</span>(<span class="string">&quot;        ESTOP0&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>其次进行倍频、分频设置<br>分频：<code>SysCtrlRegs.PLLSTS.bit.DIVSEL</code><sup><a href="#fn_2" id="reffn_2">2</a></sup><br>![[初始化-1.png]]<br>倍频：<code>SysCtrlRegs.PLLCR.bit.DIV</code><br>0：PLL 电路是旁路<br>其他：DIV 为倍频数 (最大只能是 10 倍频，大于 10 保留)</p><p>改倍频数前要确保 <code>DIVSEL</code> =0<br>还要关闭 missing clock detect logic（即时钟检测电路）：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SysCtrlRegs.PLLSTS.bit.MCLKOFF = <span class="number">1</span>;</span><br></pre></td></tr></table></figure><p>在修改倍频数后系统等待锁相环稳定，可通过 <code>SysCtrlRegs.PLLSTS.bit.PLLLOCKS</code> 判断状态<br>0 表示仍在锁相；1 表示锁相完成</p><p>锁相前后关于 watchdog 的设置有两种方式</p><ol><li>在锁相前关闭：<code>DisableDog()</code></li><li>在锁相过程中喂狗：<code>ServiceDog()</code></li></ol><p>锁相完成后开启时钟检测电路</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SysCtrlRegs.PLLSTS.bit.MCLKOFF = <span class="number">0</span>;</span><br></pre></td></tr></table></figure><p>最后锁相完成修改分频数<br>注意设置 1 分频只有当 PLL 不工作时启用</p><hr><h3 id="InitPeripheralClocks"><a href="#InitPeripheralClocks" class="headerlink" title="InitPeripheralClocks()"></a><code>InitPeripheralClocks()</code></h3><p>此函数初始化外围模块的时钟。<br>首先设置高时钟预分频器和低时钟预分频器<br>其次，为每个外设启用时钟。<br>为了降低功耗，禁用未使用外设的时钟</p><p>注意：如果未启用外设时钟，则无法读取或写入该外设的寄存器</p><p><sup><a href="#fn_1" id="reffn_1">1</a></sup>:<br>[Figure 1-22. PLLCR Change Procedure Flow Chart] (<a href="zotero://open-pdf/library/items/JXR68VRX?page=71&amp;annotation=9URLD76I">pdf</a>)\<br>(<a href="zotero://select/library/items/VGTVWMTS">“TMS320x2833x, TMS320x2823x Technical Reference Manual”, 2020, p. 71</a>)<br><sup><a href="#fn_2" id="reffn_2">2</a></sup>:<br>“Table 1-22. PLLStatus Register (PLLSTS) Field Descriptions” (<a href="zotero://select/library/items/VGTVWMTS">“TMS320x2833x, TMS320x2823x Technical Reference Manual”, 2020, p. 73</a>) (<a href="zotero://open-pdf/library/items/JXR68VRX?page=73&amp;annotation=P52WQ6F6">pdf</a>)</p>]]></content>
     
@@ -39,11 +62,11 @@
   </entry>
   
   <entry>
-    <title></title>
+    <title>文学理论-第一章 文学本质论：文学是什么？</title>
     <link href="http://example.com/2023/01/09/%E6%96%87%E5%AD%A6%E7%90%86%E8%AE%BA/%E6%96%87%E5%AD%A6%E7%90%86%E8%AE%BA-%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E6%96%87%E5%AD%A6%E6%9C%AC%E8%B4%A8%E8%AE%BA%EF%BC%9A%E6%96%87%E5%AD%A6%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/"/>
     <id>http://example.com/2023/01/09/%E6%96%87%E5%AD%A6%E7%90%86%E8%AE%BA/%E6%96%87%E5%AD%A6%E7%90%86%E8%AE%BA-%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E6%96%87%E5%AD%A6%E6%9C%AC%E8%B4%A8%E8%AE%BA%EF%BC%9A%E6%96%87%E5%AD%A6%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/</id>
     <published>2023-01-09T08:17:09.871Z</published>
-    <updated>2022-12-26T15:35:33.117Z</updated>
+    <updated>2023-01-09T08:40:18.466Z</updated>
     
     <content type="html"><![CDATA[<p>Links:<br>Origin:<br><a href="https://www.bilibili.com/video/BV1LE411e7NE?p=3&amp;vd_source=618e507256a71861502c38b0d77c643b">20190916 文学本质论（1）：本质主义；审美特性_哔哩哔哩_bilibili</a><br><a href="https://www.bilibili.com/video/BV1LE411e7NE?p=4&amp;vd_source=618e507256a71861502c38b0d77c643b">20190916 文学本质论（2）：审美本质；语言符号_哔哩哔哩_bilibili</a></p><hr><h2 id="一、文学的“本质主义”与“反本质主义”"><a href="#一、文学的“本质主义”与“反本质主义”" class="headerlink" title="一、文学的“本质主义”与“反本质主义”"></a>一、文学的“本质主义”与“反本质主义”</h2><p>本质主义：现象背后有本质<br>反本质主义：现象不等于本质</p><p>E.g. “梨花体”</p><p>反本质不等于无本质，反对的是教条性的本质，认为一个作品是文学的原因就是本质</p><p>文学本质：文学性，使得一部作品成为文学的特性（俄国形式主义，雅各布森）</p><h2 id="二、文学性"><a href="#二、文学性" class="headerlink" title="二、文学性"></a>二、文学性</h2><h3 id="文学的存在方式"><a href="#文学的存在方式" class="headerlink" title="文学的存在方式"></a>文学的存在方式</h3><p>物质性的存在还是精神性的存在</p><p>E.g. 口头文学</p><h3 id="文学性的四个维度"><a href="#文学性的四个维度" class="headerlink" title="文学性的四个维度"></a>文学性的四个维度</h3><ol><li>维度一，审美、文化</li></ol><p>人类把握世界的三种方式：真、善、美</p><ol><li>文学与真，文学追求的是真实感，而不是真实<br>E.g.《三国志》和《三国演义》</li><li>文学与善<br>E.g.《安娜·卡列尼娜》《麦田里的守望者》《洛丽塔》<br>E.g. 日剧贤者之爱<br>E.g.《红楼梦》选班长，林黛玉的人性光辉</li><li>文学与美<br>美是人的本能需求<br>美学：学科；审美：活动<br>美的本质是什么，跟实用性的距离产生了美，无功利</li></ol><p>康德：《判断力批判》<br>「无目的的合目的性」辩证，无目的，即无功利；审美也是一种精神性目的<br>「无概念而具有普遍性」</p><p>黑格尔：《美学》<br>「人本质力量的对象化」本质力量，人区别于其他动物的部分<br>「理念的感性显现」理念，柏拉图洞喻，现象和本质（理念）</p><ol><li>维度二，语言、符号</li></ol><p>媒介，区别于其他艺术</p><p>语言的基本特征</p><ol><li><p>语言是一个符号系统<br>索绪尔《普通语言学教程》<br>能指&amp;所指：符号本身&amp;符号指称对象，语言符号具有任意性，但需要约定俗成<br>语言&amp;言语：词汇、语法系统&amp;日常的个体语言活动<br>组合&amp;聚合：横向句段关系&amp;纵向联想关系</p><p>罗兰·巴特《神话学》<br>一级符号系统作为能指，指向文化概念，构成了二级符号系统<br>Rose→玫瑰花→爱情<br>1979《枫》因镜头二级文化系统被禁</p><p>语言本身就是一个世界<br>中文的语音和文字是两套系统，具有特殊性，造成符号的多意<br>唐后无典</p></li></ol>]]></content>
     
@@ -61,11 +84,11 @@
   </entry>
   
   <entry>
-    <title></title>
+    <title>文学理论-绪论：什么是理论？什么是文学理论？</title>
     <link href="http://example.com/2023/01/09/%E6%96%87%E5%AD%A6%E7%90%86%E8%AE%BA/%E6%96%87%E5%AD%A6%E7%90%86%E8%AE%BA-%E7%BB%AA%E8%AE%BA%EF%BC%9A%E4%BB%80%E4%B9%88%E6%98%AF%E7%90%86%E8%AE%BA%EF%BC%9F%E4%BB%80%E4%B9%88%E6%98%AF%E6%96%87%E5%AD%A6%E7%90%86%E8%AE%BA%EF%BC%9F/"/>
     <id>http://example.com/2023/01/09/%E6%96%87%E5%AD%A6%E7%90%86%E8%AE%BA/%E6%96%87%E5%AD%A6%E7%90%86%E8%AE%BA-%E7%BB%AA%E8%AE%BA%EF%BC%9A%E4%BB%80%E4%B9%88%E6%98%AF%E7%90%86%E8%AE%BA%EF%BC%9F%E4%BB%80%E4%B9%88%E6%98%AF%E6%96%87%E5%AD%A6%E7%90%86%E8%AE%BA%EF%BC%9F/</id>
     <published>2023-01-09T08:17:09.867Z</published>
-    <updated>2022-12-24T12:27:48.943Z</updated>
+    <updated>2023-01-09T08:40:07.296Z</updated>
     
     <content type="html"><![CDATA[<p>Links:<br>Origin:<br><a href="https://www.bilibili.com/video/BV1LE411e7NE?p=1&amp;vd_source=618e507256a71861502c38b0d77c643b">20190909 绪论：什么是文学理论？（1）_哔哩哔哩_bilibili</a><br><a href="https://www.bilibili.com/video/BV1LE411e7NE?p=2&amp;vd_source=618e507256a71861502c38b0d77c643b">20190909 绪论：什么是文学理论？（2）_哔哩哔哩_bilibili</a><br><a href="https://www.bilibili.com/video/BV1LE411e7NE?p=3&amp;vd_source=618e507256a71861502c38b0d77c643b">20190916 文学本质论（1）：本质主义；审美特性_哔哩哔哩_bilibili</a></p><hr><h2 id="一、何谓理论？"><a href="#一、何谓理论？" class="headerlink" title="一、何谓理论？"></a>一、何谓理论？</h2><p>理论约等于哲学<br>哲学：系统化的世界观和方法论<br>理论没有那么系统化，<strong>理论是对现象的抽象分析和概括</strong></p><p>学习理论需要的能力：</p><ol><li><p>深入思考能力：反思、批判、质疑<br>质疑那些不可疑的东西<br>Common sense is the collection of prejudices acquired by age eighteen.<br>——Albert Einstein<br>常识就是人到十八岁为止所累积的各种偏见。<br>E.g. 游戏，如何上瘾？意外的惊喜，朋友圈的比较……<br>E.g. app 推送<br>E.g. 人的选择是脆弱的，《楚门的世界》</p></li><li><p>分析现象背后本质的能力：解读、阐释<br>E.g. 同性婚姻合法化，对婚姻的反思，陷入反思的循环，需要解读</p></li></ol><p>乔纳森·卡勒对理论的定义</p><ol><li>理论是分析的话语</li><li>理论是对常识的批评</li><li>理论具有反射性（反思性），是关于思维的思维（冷峻的旁观）</li><li>理论是跨学科的</li></ol><h2 id="二、何谓文学理论？"><a href="#二、何谓文学理论？" class="headerlink" title="二、何谓文学理论？"></a>二、何谓文学理论？</h2><h3 id="文学的-“哲学”"><a href="#文学的-“哲学”" class="headerlink" title="文学的 “哲学”"></a>文学的 “哲学”</h3><ol><li><p>作者之意 vs 读者之意<br>E.g. 作者做不出根据自己文章出的题目，作者对作品具有绝对权威的阐释权？《安娜·卡列尼娜》</p></li><li><p>你是否看到一只鸡？<br>克拉考尔《电影的本质》，8 画格的存在，熟悉<br>争论结果不重要，重要的是争论的原因，认知的差异</p></li><li><p>随意解读 vs 科学的解读<br>基于文本</p></li><li><p>阅读为何：接受式/反思性<br>破坏审美体验，分析的快感<br>E.g. 《微微一笑很倾城》，校园爱情的套路，“你出一尺，为挪墙一尺”<br>E.g. 武侠小说，建构仇恨<br>E.g. 迪士尼动画电影，成长故事<br>E.g. 《狮子王》隐性价值观：精英主义价值观，血统论的逻辑</p></li></ol><h3 id="评判作品背后的价值系统"><a href="#评判作品背后的价值系统" class="headerlink" title="评判作品背后的价值系统"></a>评判作品背后的价值系统</h3><p>文学理论：谁能写进文学史，地位怎么样<br>文学理论在不同时代是变动的<br>当代视角下的王者段位作家：李白、杜甫、陶渊明、苏轼</p><p>喜厌和好坏无关系</p><h3 id="提供解读作品的角度和方法"><a href="#提供解读作品的角度和方法" class="headerlink" title="提供解读作品的角度和方法"></a>提供解读作品的角度和方法</h3><p>一切的意义都是阐释的结果</p><h3 id="跨学科性"><a href="#跨学科性" class="headerlink" title="跨学科性"></a>跨学科性</h3><p>哲学：史铁生作品的存在主义解读<br>心理学：精神分析弗洛伊德<br>语言学、社会学</p><h2 id="三、文学理论的研究对象"><a href="#三、文学理论的研究对象" class="headerlink" title="三、文学理论的研究对象"></a>三、文学理论的研究对象</h2><p>E.g. 各国地区电视剧鄙视链</p><p>艾布拉姆斯《镜与灯》文学四要素<br>![[文学理论-绪论：什么是理论？什么是文学理论？ 2022-12-24 20.14.51.excalidraw]]</p><p>根据四要素，文学理论研究的五个方面：</p><ol><li>文学本质论</li><li>文学活动论</li><li>文学创作论</li><li>文学文本论</li><li>文学接受论</li></ol>]]></content>
     
